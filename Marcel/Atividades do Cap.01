@@ -1,0 +1,108 @@
+___Questão 1___
+Abstração e gerência
+
+___Questão 2___
+Por Prover interfaces de acesso aos dispositivos, tornar os aplicativos independentes do hardware e definir interfaces de acesso 
+homogêneas para dispositivos com tecnologias distintas. Sim, através do processo de abstração é possível que os aplicativos sejam 
+utilizados em diferentes sistemas utilizando da mesma interface para dispositivos diversos.
+
+___Questão 3___
+Gerenciar o uso dos recursos de hardware pelos aplicativos, e resolver eventuais disputas de conflitos. A identificação de possíveis 
+ataques através da internet é sem dúvidas uma das principais situações a serem melhoradas, afim de que todo um sistema não seja 
+prejudicado ou utilizado por um único usuário ou pequeno grupo.
+
+___Questão 4___
+Sua principal característica é um comportamento temporal previsível, onde seu tempo de resposta é conhecido no melhor e pior caso de 
+operação. Suas duas classificações são: Soft real-time systems e Hard real-time systems. A principal diferença entre eles é que, no caso
+de perda de prazo de uma determinada operação as consequências serão na degradação do serviço prestado (Soft real-time) ou em 
+graves consequências humanas, ambientais e econômicas (Hard real-time).
+
+___Questão 5___
+O núcleo é responsável pela gerência dos recursos do hardware usados pelas aplicações. Ele também implementa as principais abstrações 
+utilizadas pelos programas aplicativos, enquanto os módulos externos representam as várias funcionalidades do sistema.
+
+___Questão 6___
+Não, uma vez que os diferentes níveis de privilégios são de extrema importância para o gerenciamento de todo Sistema Operacional. 
+Eles diferem na capacidade de interação com o hardware, em termos de gerência, configuração, utilitários e aplicativos, sem esses 
+níveis de privilégios todo o sistema ficaria desestabilizado por inteiro.
+
+___Questão 7___
+sim, se houvesse processamento entre os níveis
+
+___Questão 8___
+Interrupção: O processador suspende seu fluxo de execução e o desvia para um endereço que esteja pré-definido.
+Exceções: São geradas pelo processador podendo ocasionar o desvio a ser executado, semelhante a uma interrupção.
+Traps: É um tipo de interrupção que concede o status de nível privilegiado ao processador.
+
+___Questão 9___
+Se não existissem interrupções, o processador perderia muito tempo “varrendo” todos os dispositivos do sistema para verificar se há 
+eventos a serem tratados.
+
+___Questão 10___
+O comando Fopen é uma função da biblioteca padrão da linguagem C. Essa função está defina no cabeçalho do Stdio.h.
+
+___Questão 11___
+Sistemas monolíticos::
++ Grande Desempenho
+- Robustez e facilidade de desenvolvimento prejudicados
+- Manutenção e evolução do núcleo mais complexas
+
+Sistema em camadas::
++ Melhor estruturação do Sistema Operacional
+- O empilhamento de várias camadas de software implicada em maior tempo para acessar o recurso escolhido, prejudicando o desempenho do SO.
+Sistemas micronúcleo::
++ robustez e flexibilidade
+- Custo associado elevado
+
+___Questão 12___
+T
+K
+E
+D
+M
+E
+K
+S
+K
+
+___Questão 13___
+C
+No nível usuário o hardware restringe o uso da memória, permitindo o acesso somente a áreas previamente definidas.
+
+___Questão 14___
+D
+Os sistemas operacionais definem chamadas de sistema para todas as operações envolvendo o acesso a recursos de baixo nível 
+(periféricos, arquivos, alocação de memória, etc.)
+
+___Questão 15___
+[ 05 ] A rotina de tratamento da interrupção de software é ativada dentro do núcleo. 
+[ 08 ] A função printf finaliza sua execução e devolve o controle ao código do processo. 
+[ 03 ] A função de biblioteca printf recebe e processa os parâmetros de entrada (a string “Hello world”). 
+[ 02 ] A função de biblioteca printf prepara os registradores para solicitar a chamada de sistema write(). 
+[ 06 ] O disco rígido gera uma interrupção indicando a conclusão da operação. 
+[ 04 ] O escalonador escolhe o processo mais prioritário para execução. 
+[ 07 ] Uma interrupção de software é acionada. 
+[ 01 ] O processo chama a função printf da biblioteca C. 
+[ 10 ] A operação de escrita no terminal é efetuada ou agendada pela rotina de tratamento da interrupção. 
+[ 09 ] O controle volta para a função printf em modo usuário.
+
+___Questão 16___
+C 
+As afirmações III e IV estão erradas. III está errado pois é uma característica de sistemas distribuídos e não de rede; e IV está 
+errado pois é uma característica de sistemas desktop e não de tempo real.
+
+___Questão 17___
+E 
+As afirmações II e V estão corretas. I está errada pois uma máquina virtual de sistema é construída para suportar sistemas operacionais 
+convidados completos; III está errada pois isso ocorre em sistemas monolíticose não micro-núcleos; IV está errada pois sistemas
+monolíticos não tem uma manutenção fácil e sim complexa.
+
+___Questão 18___
+Para o carregamento de bibliotecas compartilhadas, mapeamento da memória e -- no final do rastreio -- a emissão das informações sobre 
+a data para a saída padrão.
+
+___Questão 19___
+O utilitário date chama uma biblioteca com o fim de comunicar com o núcleo. Esta biblioteca manipula os detalhes de baixo nível 
+relacionados com a passagem de informação para o núcleo e com a chamada da rotina privilegiada propriamente dita, nomeadamente a
+conversão de convenções de chamadas. As chamadas de sistema são oferecidas para as aplicações em modo usuário através da system 
+library que prepara os parâmetros, invoca a interrupção de software e retorna à aplicação os resultados obtidos.
