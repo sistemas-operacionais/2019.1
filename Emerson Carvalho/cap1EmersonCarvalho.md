@@ -32,52 +32,51 @@ R: Ao ignorar por muito tempo as interrupções o processador pode se deparar co
 R: O comando fopen é uma chamada de sistema que é efetuada atráves de uma biblioteca da linguagem C.
 
 11. Monte uma tabela com os benefícios e deficiências mais significativos das principais arquiteturas de sistemas operacionais.
+R:  Sistema  Monolíticos
+        Vantagem: Desempenho
+        Desvantagem: Problemas na Robustez e Facilidade de Desenvolvimento
+
 
 12. Relacione as afirmações aos respectivos tipos de sistemas operacionais: distribuído (D), multi-usuário (M), desktop (K), servidor (S), embarcado (E) ou de tempo-real (T):
-    [**S**] Deve ter um comportamento temporal previsível, com prazos de resposta
-    claramente definidos.
-    [**S**] Sistema operacional usado por uma empresa para executar seu banco de
-    dados corporativo.
-    [**S**] São tipicamente usados em telefones celulares e sistemas eletrônicos dedicados.
-    [**S**] Neste tipo de sistema, a localização física dos recursos do sistema computacional é transparente para os usuários.
-    [**S**] Todos os recursos do sistema têm proprietários e existem regras controlando
-    o acesso aos mesmos pelos usuários.
-    [**S**] A gerência de energia é muito importante neste tipo de sistema.
-    [**S**] Sistema que prioriza a gerência da interface gráfica e a interação com o
-    usuário.
+    [**T**] Deve ter um comportamento temporal previsível, com prazos de resposta claramente definidos.
+    [**S**] Sistema operacional usado por uma empresa para executar seu banco de dados corporativo.
+    [**E**] São tipicamente usados em telefones celulares e sistemas eletrônicos dedicados.
+    [**D**] Neste tipo de sistema, a localização física dos recursos do sistema computacional é transparente para os usuários.
+    [**M**] Todos os recursos do sistema têm proprietários e existem regras controlando o acesso aos mesmos pelos usuários.
+    [**E**] A gerência de energia é muito importante neste tipo de sistema.
+    [**K**] Sistema que prioriza a gerência da interface gráfica e a interação com o usuário.
     [**S**] Construído para gerenciar de forma eficiente grandes volumes de recursos.
-    [**S**] O MacOS X é um exemplo típico deste tipo de sistema.
-    [**S**] São sistemas operacionais compactos, construídos para executar aplicações
-    específicas sobre plataformas com poucos recursos.
+    [**K**] O MacOS X é um exemplo típico deste tipo de sistema.
+    [**E**] São sistemas operacionais compactos, construídos para executar aplicações específicas sobre plataformas com poucos recursos.
 
 13. A operação em modo usuário permite ao processador executar somente parte das instruções disponíveis em seu conjunto de instruções. Quais das seguintes operações não deveriam ser permitidas em nível usuário? Por quê?
     (a) Ler uma porta de entrada/saída
     (b) Efetuar uma divisão inteira
-    (c) Escrever um valor em uma posição de memória
+    **(c) Escrever um valor em uma posição de memória**
     (d) Ajustar o valor do relógio do hardware
     (e) Ler o valor dos registradores do processador
-    (f) Mascarar uma ou mais interrupções
+    **(f) Mascarar uma ou mais interrupções**
 
 14. Considerando um processo em um sistema operacional com proteção de memória entre o núcleo e as aplicações, indique quais das seguintes ações do processo teriam de ser realizadas através de chamadas de sistema, justificando suas respostas:
     (a) Ler o relógio de tempo real do hardware.
     (b) Enviar um pacote através da rede.
     (c) Calcular uma exponenciação.
-    (d) Preencher uma área de memória do processo com zeros.
+    **(d) Preencher uma área de memória do processo com zeros.**
     (e) Remover um arquivo do disco.
 
 15. Coloque na ordem correta as ações abaixo, que ocorrem durante a execução da função printf("Hello world") por um processo (observe que nem todas as ações indicadas fazem parte da seqüência).
     [ ] A rotina de tratamento da interrupção de software é ativada dentro do núcleo.
-    [ ] A função printf finaliza sua execução e devolve o controle ao código do
+    [5] A função printf finaliza sua execução e devolve o controle ao código do
     processo.
-    [ ] A função de biblioteca printf recebe e processa os parâmetros de entrada (a
+    [2] A função de biblioteca printf recebe e processa os parâmetros de entrada (a
     string “Hello world”).
-    [ ] A função de biblioteca printf prepara os registradores para solicitar a
+    [3] A função de biblioteca printf prepara os registradores para solicitar a
     chamada de sistema write()
     [ ] O disco rígido gera uma interrupção indicando a conclusão da operação.
     [ ] O escalonador escolhe o processo mais prioritário para execução.
     [ ] Uma interrupção de software é acionada.
-    [ ] O processo chama a função printf da biblioteca C.
-    [ ] A operação de escrita no terminal é efetuada ou agendada pela rotina de
+    [1] O processo chama a função printf da biblioteca C.
+    [4] A operação de escrita no terminal é efetuada ou agendada pela rotina de
     tratamento da interrupção.
     [ ] O controle volta para a função printf em modo usuário.
 
@@ -92,7 +91,7 @@ R: O comando fopen é uma chamada de sistema que é efetuada atráves de uma bib
     
     (a) As afirmações II e III estão corretas.
     (b) Apenas a afirmação V está correta.
-    (c) As afirmações III e IV estão erradas.
+    **(c) As afirmações III e IV estão erradas.**
     (d) As afirmações III, IV e V estão erradas.
     (e) Todas as afirmações estão erradas.
     
@@ -109,8 +108,10 @@ R: O comando fopen é uma chamada de sistema que é efetuada atráves de uma bib
     (b) As afirmações II e III estão corretas.
     (c) As afirmações II e IV estão erradas.
     (d) Apenas a afirmação V está correta.
-    (e) As afirmações II e V estão corretas.    
+    **(e) As afirmações II e V estão corretas.**    
 
 18. O utilitário strace do UNIX permite observar a sequência de chamadas de sistem efetuadas por uma aplicação. Em um terminal UNIX, execute strace date para descobrir quais os arquivos abertos pela execução do utilitário date (que indica a data e hora correntes). Por que o utilitário date precisa fazer chamadas de sistema?
+R: As chamadas são efetuadas para que a memória seja mapeada e as bibliotecas necessárias sejam carregadas, de modo que as informações sobre a data possam ser carregadas.
 
 19. O utilitário ltrace do UNIX permite observar a sequência de chamadas de biblioteca efetuadas por uma aplicação. Em um terminal UNIX, execute ltrace date para descobrir as funções de biblioteca chamadas pela execução do utilitário date (que indica a data e hora correntes). Pode ser observada alguma relação entre as chamadas de biblioteca e as chamadas de sistema observadas no ítem anterior?
+As bibliotecas são utilizadas para que a comunicação de baixo nível ocorra.
