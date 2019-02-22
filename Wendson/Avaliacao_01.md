@@ -1,4 +1,5 @@
 Respostas
+
 Questão 01
 Abstração de Recursos e Gerência de Recursos.
 
