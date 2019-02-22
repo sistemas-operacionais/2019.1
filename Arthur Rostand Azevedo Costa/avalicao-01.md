@@ -10,3 +10,18 @@
 
 5. Como o próprio nome diz, o núcleo é o centro do sistema operacional pertencente a camada mais baixa de um sistema e gerencia os recursos dos hardwares usados pelas aplicações. As demais partes do sistema são responsáveis por auxiliar o núcleo de maneiras variadas (como ajudando na comunicação do núcleo com hardwares específicos, ou adicionando uma interface gráfica ou ainda auxiliando na inicialização do mesmo...).
 
+ 6. Não seria possível criar um SO seguro sem ter níveis de privilégio no processador, pois sem eles qualquer aplicação teria acesso total a todos os recursos do processador, inviabilizando qualquer nível de segurança.
+ 
+ 7. Suponho que os níveis intermediários sirvam para isolar processos específicos, ou para assinalar uma parte predeterminada do processador para tais processos, ou como medida de segurança para evitar conflitos entre processos.
+ 
+ 8. Interrupções são necessárias para a adição de informação vinda de periféricos ou aplicativos ao processador, sem precisar que o mesmo fique o tempo todo checando por informação vinda de tais fontes. Geralmente interrupções eram mais comuns vindas de periféricos (como o teclado), mas quando são feitas por softwares que precisam se comunicar com aréas de hardware separadas pelo sistema, essas interrupções são conhecidas por traps. Já uma exceção é causada por um erro de sistema que precisa ser tratado, quando o processo toma uma rota diferente da normal (uma exceção).
+ 
+ 9. Mascarar uma interrupção é diminuir sua prioridade de tratamento em relação ao processador, para dar prioridade a outras interrupções "mais importantes". Apesar de extremamente útil, o seu uso pode atrasar o sistema, prejudicando o desempenho.
+ 
+ 10. O comando fopen da linguagem C é uma chamada de biblioteca, pois não possui acesso direto ao sistema e é pertencente a libC.
+ 
+ 11. Sistema Monolítico: Vantagens: Desempenho (todas as partes se comunicam diretamente) e Compactação do sistema. Desvantagens: Na falha de algum componente, o sistema todo falha e a complexidade de manutenção/evolução.
+ Sistema de Camadas: Vantagens: Boa abstração (facilidade de manutenção e evolução) Desvantagens: Perda de desempenho pela demora em comunicação das partes.
+ Sistema Micronúcleo: Vantagens: robustez e segurança (caso um problema ocorra numa parte do sistema, é fácil isolá-lo e evitar que o erro se alastre) e boa customização do sistema operacional. Desvantagens: Perda de desempenho pela demora em comunicação das partes.
+ 
+ 12. T ; S ; 
