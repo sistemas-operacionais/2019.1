@@ -24,4 +24,6 @@
  Sistema de Camadas: Vantagens: Boa abstração (facilidade de manutenção e evolução) Desvantagens: Perda de desempenho pela demora em comunicação das partes.
  Sistema Micronúcleo: Vantagens: robustez e segurança (caso um problema ocorra numa parte do sistema, é fácil isolá-lo e evitar que o erro se alastre) e boa customização do sistema operacional. Desvantagens: Perda de desempenho pela demora em comunicação das partes.
  
- 12. T ; S ; 
+ 12. T ; S ; E ; D ; M ; E ; K ; S ; K ; E .
+ 
+ 13. 
