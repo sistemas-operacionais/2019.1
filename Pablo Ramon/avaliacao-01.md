@@ -32,6 +32,24 @@ Questão 09: Ao mascarar interrupções, elas são ignoradas pelo processador, u
 
 Questão 10: fopen é uma função da biblioteca de entrada e saída da linguagem C.
 
+Questão 11: 
+            Sistemas monolíticos:
+            Vantagem: A maior vantagem é o desempenho gerado por todos os componentes trabalharem em modo núcleo.
+            Deficiência: A manuntenção desses sistemas se tornam complexas, e se um componente perca o controle, o dano causado ao sistema pode ser muito grande, pois o problema desse componente pode se alastrar pelo resto do núcleo, pois esse componente defeituoso tem privilégios de núcleo.
+            
+            Sistemas em camadas:
+            Vantagem: O núcleo dividido em camadas permite que os níveis de abstração tornem-se mais refinados de acordo com as camadas. A camada mais baixa realiza a interface direta com o hardware, ao subir nas camadas os níveis de abstração se tornam mais sofisticados, até chegar na última camada, onde é implementada a interface para as aplicações do usuário.
+            Deficiência: O empilhamento de camadas de software faz com que cada pedido da aplicação demore mais tempo para chegar ao hardware, prejudicando o desempenho di sistema.
+            
+            Sistemas micronúcleo:
+            Vantagem: A principal vantagem é a robustez e flexibilidade desse tipo de sistema, por exemplo, se um subsistema começar a apresentar problemas, os mecanismos de proteção dde memória e níveis de privilégio vão isolá-lo, impedindo que a instabilidade alastre-se. 
+            Deficiências: O tempo de troca de mensagens entre os componentes pode ser muito elevado, prejudicando o desempenho do sistema.
+            
+            Máquinas virtuais:
+            Vantagem: A independência do hardware para a utilização de diferentes sistemas operacionais, auxiliando no debug de sistemas experimentais, e testes.
+            Desvantagem: Custo adicional de execução dos processos na máquina virtual, chegando a 50% nas plataformas que não suportam virtualização.
+            
+            
 Questão 12: [T]
             [S]
             [E]
@@ -66,3 +84,7 @@ Questão 16: (c) III - Está errada pois não é o sistema operacional de rede, 
 Questão 17: (e) I - Errada, pois uma máquina virtual de sistema suporta um S.O inteiro.
                 IV - Errada, pois a manutenção não era simples, principalmente com o aumento do sistema.
                 III - Errada, pois no micro-núcleo os componentes do sistema ficam no nível de usuário.
+                
+Questão 18: Ele precisa efetuar chamadas de sistema pois este utilitário usa o relógio do sistema (relógio de hardware) para efetuar os cálculos de data, e não é possível acessá-lo no modo usuário.
+
+Questão 19: Existe alguma relação sim, algumas chamadas de função até mesmo possuem o nome parecido com as chamadas de sistema, por exemplo: fwrite - write   fclose - close. E quase sempre essas chamadas de função que são pegas pelo ltrace estão atreladas a uma chamada de sistema. Principalmente no caso do utilitário date que precisa acessar um dado do relógio de hardware, que só está disponível a nível de núcleo.
