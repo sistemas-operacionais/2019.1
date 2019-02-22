@@ -33,6 +33,7 @@ Questão 09: Ao mascarar interrupções, elas são ignoradas pelo processador, u
 Questão 10: fopen é uma função da biblioteca de entrada e saída da linguagem C.
 
 Questão 11: 
+            
             Sistemas monolíticos:
             Vantagem: A maior vantagem é o desempenho gerado por todos os componentes trabalharem em modo núcleo.
             Deficiência: A manuntenção desses sistemas se tornam complexas, e se um componente perca o controle, o dano causado ao sistema pode ser muito grande, pois o problema desse componente pode se alastrar pelo resto do núcleo, pois esse componente defeituoso tem privilégios de núcleo.
