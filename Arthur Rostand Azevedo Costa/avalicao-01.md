@@ -26,4 +26,12 @@
  
  12. T ; S ; E ; D ; M ; E ; K ; S ; K ; E .
  
- 13. 
+ 13. D) o relógio do hardware é importante para muitos processos (especialmente de tempo real) e não deve ser modificado pelo usuário ; E) a leitura do valor do registrador do processador deveria ser feita por meio de abstração, para simplificar o processo de processamento de informação ; F) a mascaragem de uma operação deve ser de total controle do processador, sem o controle do usuário que o fará de forma indireta, controlada pelo próprio núcleo.
+ 
+ 14. C) o cálculo de uma exponenciação necessita de mais recursos que os demais cálculos aritméticos ; D) memória do processador só pode ser acessada através de um syscall.
+ 
+ 15. O processo chama a funçãoprintfda biblioteca C. -> A função de bibliotecaprintfrecebe e processa os parâmetros de entrada (astring “Hello world”) -> Uma interrupção de software é acionada. -> A rotina de tratamento da interrupção de software é ativada dentro do núcleo. -> O escalonador escolhe o processo mais prioritário para execução. -> A operação de escrita no terminal é efetuada ou agendada pela rotina detratamento da interrupção -> A funçãoprintffinaliza sua execução e devolve o controle ao código do processo
+ 
+ 16. C) Não é necessário que a localização dos recursos seja transparente para os usuários, apenas que os recursos estejam disponíveis, não importando a distância. A interação com o usuário não é tão necessária quanto a necessidade de minimizar esperas e latências previsíveis.
+ 
+ 17. 
