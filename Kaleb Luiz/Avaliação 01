@@ -1,6 +1,6 @@
 1 - Os principais objetivos de um Sistema operacional são abstração e gerência.
 
-2 - Pois facilita o acesso aos recursos de hardware que envolve um nível de complexidade alto. (INCOMPLETA)
+2 - Pois facilita o acesso aos recursos de hardware que envolve um nível de complexidade alto. 
 
 3 - As vantagens envolvem; evitar que o aplicações monopolizem o processador, e facilita o trabalho dos programadores, e permite a construção de sistemas mais interativos. Um dos desafio é ter que decidir a quantidade de memória qu cada aplicação ativa deve receber, outro é sabe qual o próximo pacote de rede a enviar para concluir com um êxito um determinado serviço.  
 
@@ -16,7 +16,7 @@
 
 9 - Se não existissem interrupções, o processador perderia muito tempo “varrendo” todos os dispositivos do sistema para verificar se há eventos a serem tratados.
 
-10 - "fopen" é uma função da biblioteca stdio.h da linguagem C. (INCOMPLETA)
+10 - "fopen" é uma função da biblioteca stdio.h da linguagem C. 
 
 11 - Sistemas monolíticos: 
 
@@ -46,7 +46,7 @@ Vantagens: Aperfeiçoamento e testes de novos sistemas operacionais, executar si
 
 Desvantagens: A principal desvantagem é o custo adicional de execução dos processos na máquina virtual.
 
-12 - (Temp) - (Serv) - (Emb) - (Dist) - (Mult) - (Emb) - (Dist) - (Serv) - (desK) - (Emb)
+12 - (T) - (S) - (E) - (D) - (M) - (E) - (D) - (S) - (K) - (E)
 
 13 - A, E, F; Os recursos internos do processador e as áreas de memória são acessíveis apenas no nível núcleo. 
 
