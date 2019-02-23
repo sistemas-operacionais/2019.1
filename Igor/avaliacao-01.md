@@ -42,7 +42,7 @@ tratados, deste modo, a quantidade de tempo envolvendo a solução é maior que 
 
 17. **R: E**
     
-    _Erradas/Motivo_
+    _Erradas/Motivos_
     
     I -> Máquinas virtuais são feitas para suportar sistemas operacionais completos.
     
