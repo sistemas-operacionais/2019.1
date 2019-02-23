@@ -53,7 +53,7 @@ de eventos internos ou externos.
 - Distinguir interrupções gerados por dispositivos distintos, e definir o tipo de tratamento para cada uma delas.
  - Torna eficiente a interação do processador com os dispositivos periféricos.
 - Prejudicar o desempenho do Sistema.
-- 
+
 
 10ª: 
 Função de biblioteca. Pois é uma função de acesso a arquivos definida em uma Biblioteca.
@@ -103,7 +103,8 @@ c - Não.
 d - Sim
 e - Sim.
 
-Para ter acesso aos componentes mais baixos, é necessário que o sistema operacional para realizar as operações.
+Para ter acesso aos componentes mais baixos, é necessário que o sistema operacional realize chamadas ao sistema 
+para realizar as operações nesses componentes.
 
 15ª: 
 
@@ -111,9 +112,9 @@ Para ter acesso aos componentes mais baixos, é necessário que o sistema operac
 2 - 7
 3 - 2
 4 - 3
-5 - 
+5 - X
 6 - 4
-7 - 
+7 - X
 8 - 1 
 9 - 6
 10 - 8
@@ -126,7 +127,7 @@ III - F, isso é caracteristica do so distribuido.
 IV - F, isso é caracteristica do so desktop.
 V - V
 
-(c)
+Letra (c)
  
 17ª: 
 
@@ -140,10 +141,14 @@ podem não ser evidentes, e caso uma estrutura seja alterada, pode causar um imp
 nos demais componentes que também tenham acesso a aquela estrutura. 
 V - V 
 
-e. 
+Letra (e). 
 
-18ª: Para o carregamento de bibliotecas compartilhadas, mapeamento da memória e – no final do rastreio – a emissão das informações sobre a data para a saída padrão.
+18ª: 
 
-19ª: O utilitário date chama uma biblioteca com o fim de comunicar com o núcleo. Esta biblioteca manipula os detalhes de baixo nível
+Para o carregamento de bibliotecas compartilhadas, mapeamento da memória e – no final do rastreio – a emissão das informações sobre a data para a saída padrão.
+
+19ª: 
+
+O utilitário date chama uma biblioteca com o fim de comunicar com o núcleo. Esta biblioteca manipula os detalhes de baixo nível
 relacionados com a passagem de informação para o núcleo e com a chamada da rotina privilegiada propriamente dita, nomeadamente a
 conversão de convenções de chamadas. As chamadas de sistema são oferecidas para as aplicações em modo usuário através da system library que prepara os parâmetros, invoca a interrupção de software e retorna à aplicação os resultados obtidos.
