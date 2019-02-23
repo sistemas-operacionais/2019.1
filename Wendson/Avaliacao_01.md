@@ -33,6 +33,10 @@ Questão 07
 
 Questão 08
 Difernças entre:
-Interrupção: Suspenção do fluxo de execução corrente deseviando para um endereço pré-defenido, onde se encontra uma rotina de
-tratamento de interrupção.
-Execeções: 
+Interrupção: Uma interrupção é sempre gerada por um evento externo ao programa e, sendo assim, independe da instrução que está sendo
+executada.
+Execeções: A exceção é um evento semelhante à interrupção, pois também de fato interrompe um programa. Sendo que a exceção é o resultado da execução de uma instrução dentro do próprio programa.
+Traps: uma instrução especial implementada pelos processadores que permite acionar o mecanismo de interrupção de forma intencional,
+sem depender de eventos externos ou internos. com isso comuta o processador para o nível privilegiado e procede de forma similar ao tratamento de uma interrupção.
+
+Questão 09
