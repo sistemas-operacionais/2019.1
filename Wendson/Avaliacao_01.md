@@ -40,3 +40,6 @@ Traps: uma instrução especial implementada pelos processadores que permite aci
 sem depender de eventos externos ou internos. com isso comuta o processador para o nível privilegiado e procede de forma similar ao tratamento de uma interrupção.
 
 Questão 09
+
+
+Questão 10
