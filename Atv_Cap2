@@ -57,4 +57,17 @@ dor de interrupção; as ativações periódicas do tratador de interrupção s�
   
 ## Questão 7
 
+## Questão 8
+
+## Questão 9
   
+  De forma geral, cada fluxo de execução do sistema, seja associado a um processo ou no interior do núcleo, é denominado
+thread. Se dividem em threads de usuário e de núcleo. As threads de usuário são as tarefas que devem ser realizadas pelos
+usuários e as de núcleo são as que devem ser realizadas pelo núcleo.
+
+## Questão 10
+
+  O modelo de threads N:1 é muito utilizado, por ser leve e de fácil implementação. Como o núcleo somente considera uma
+thread, a carga de gerência imposta ao núcleo é pequena e não depende do número de threads dentro da aplicação. Em compen-
+sação, o modelo de threads N:1 apresenta problemas em algumas situações, sendo o mais grave deles relacionado às operações
+de entrada/saída. Outro problema desse modelo diz respeito à divisão de recursos entre as tarefas.
