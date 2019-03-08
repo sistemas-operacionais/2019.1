@@ -24,8 +24,18 @@ quantidade de tempo, ou até que haja uma interrupção.
     e3 - executando
     e4 - suspensa
     e2 - terminada
-    t6 - transição entre executando e pronta
-    **Completar essa resposta**
+    Nova - A tarefa está sendo criada
+    Pronta - A tarefa está em memória pronta para executar
+    Executando - A tarefa está usando o processador
+    Suspensa - A tarefa está esperando dados externos ou um evento
+    Terminada - A tarefa já executou o processamento e devolverá os recursos usados para o sistema
+    t1 - transição entre executando e terminada, a tarefa terminou ou foi abortada.
+    t2 - transição entre executando e suspensa, a tarefa está esperando uma entrada, ou evento
+    t3 - transição entre suspensa e pronta, a tarefa acabou de receber a entrada, ou o evento esperado aconteceu
+    t4 - transição entre pronta e executando, a tarefa foi escolhida para ser executada.
+    t5 - transição entre nova e pronta, a tarefa terminou de ser carregada na memória.
+    t6 - transição entre executando e pronta, o quantum da tarefa se esgotou.
+    
     
 5 - [E -> P] É possível, por exemplo o fim do quantum
     [E -> S] É possível, por exemplo quando o processo está esperando algo (dado ou etc)
@@ -48,5 +58,30 @@ quantidade de tempo, ou até que haja uma interrupção.
     [E]
     [S]
     
-7 - 
+8 - O programa com a entrada (a.out 4 3 2 1) vai imprimir um único X.
+
+9 - *threads* são fluxos de execução do sistema. Cada processo pode se dividir em uma ou mais threads, permitindo a um mesmo
+processo executar várias tarefas ao mesmo tempo.
+
+10 - A principal vantagem é o fato do processo poder executar mais de uma tarefa ao mesmo tempo. Por 
+exemplo, se um navegador não pudesse se dividir em threads a navegação demoraria muito mais, pois 
+cada passo do programa teria que ser executado sequencialmente. Ao usar threads, ele pode executar mais 
+de uma tarefa do programa de uma vez. A desvantagem é que essa subdivisão torna a gerência de processos
+bem mais complexa com a possibilidade de conflitos e problemas de gerenciamento.
+
+11 - Em um problema em que é necessária uma entrada e saída o sequencial se sairá melhor, assim como
+em um sistema com poucos recursos.
+
+12 - [N:1]
+     [N:M]
+     [1:1]
+     [N:1]
+     [N:M]
+     [N:1]
+     [N:M]
+     [N:1]
+     [1:1]
+     [N:M]
+     
+
     
