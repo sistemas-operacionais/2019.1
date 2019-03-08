@@ -16,3 +16,17 @@ mentação da preempção por tempo tem como base as interrupções geradas pelo
 temporizador normalmente é programado para gerar interrupções em intervalos regulares, que são recebidas por um trata-
 dor de interrupção; as ativações periódicas do tratador de interrupção são normalmente chamadas de ticks do relógio.
   
+## Questão 4
+
+  e1 - nova tarefa
+  e2 - tarefa terminada
+  e3 - tarefa em execução
+  e4 - tarefa suspensa
+  e5 - tarefa pronta
+
+  t1 - termina a execução
+  t2 - aguarda um dado externo ou outro evento
+  t3 - dado disponível ou evento ocorreu
+  t4 - recebe o processador
+  t5 - carregada na memória
+  t6 - fim do quantum (e3 -> e5)
