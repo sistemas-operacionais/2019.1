@@ -33,5 +33,6 @@
 10. Vantagem x Desvantagem  
   Vantagem: Processos podem realizar diversas tarefas ao mesmo tempo;  
   Desvantagem: Pode ocasionar conflitos entre processos diferentes, caso os mesmos precisem utilizar o mesmo recurso.
-11.
-12.
+11. Modelo como o 1:1 é mais adequado para situações que requerem maior números de interatividade e serviçõs de rede (servidores), uma vez que, ao criar várias threads uma carga excessiva é imposta ao núcleo do sistema, fazendo então aplicações com diversas tarefas (Web-Services) serem afetadas; Outrossim, o uso de várias threads podem ocasionar conflitos entre processos distintos, de modo que eles necessitem partilhar do mesmo recurso;
+12. __A;B;B;A;C;B;A;C;C__
+13. [Array index out of página 9]
