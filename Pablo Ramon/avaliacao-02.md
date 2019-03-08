@@ -2,6 +2,9 @@
 
 ##Respostas
 
+## Info
+## Aluno: Pablo Ramon Varela de Souza
+
 1 - O PCB (process control block) é uma estrutura de dados presente no núcleo do sistema operacional que é vinculado a um processo.
 Dentro dela encontram-se informações vitais sobre o processo, como o PID (identificador do processo), os registradores da CPU, o espaço
 alocado aquele processo, prioridade, status e etc. Ela serve para armazenar toda a informação necessária
