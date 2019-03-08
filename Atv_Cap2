@@ -30,3 +30,14 @@ dor de interrupção; as ativações periódicas do tratador de interrupção s�
   t4 - recebe o processador
   t5 - carregada na memória
   t6 - fim do quantum (e3 -> e5)
+  
+## Questão 5
+  
+  Possível. Fim do quantum.
+  Possível. Aguardando um dado externo.
+  Impossível. 
+  Possível. Momento em que uma nova tarefa é admitida no sistema.
+  Impossível.
+  Possível. Final da execução.
+  Impossível.
+  Impossível.
