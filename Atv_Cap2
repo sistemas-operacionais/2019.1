@@ -1,1 +1,6 @@
+## Questão 1
 
+  São descritores de processos que ficam mantidos no núcleo do sistema operacional. Serve para armazenar as informa-
+ções referentes aos processos. Cada processo possui um identificador único no sistema, o PID - Process IDentifier.
+
+## Questão 2
