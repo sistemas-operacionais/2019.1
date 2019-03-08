@@ -5,7 +5,7 @@
 
 ## Questão 2
 
-  Time-sharing significa "tempo compartilhado". E nesse tipo de solução, cada atividade que detém o processador recebe
+  Time-sharing significa "tempo compartilhado"; nesse tipo de solução, cada atividade que detém o processador recebe
 um limite de tempo de processamento, denominado quantum. Esgotado seu tempo, a tarefa em execução perde o processador 
 e volta para uma fila de tarefas “prontas”, que estão na memória aguardando sua oportunidade de executar.
 
@@ -71,3 +71,23 @@ usuários e as de núcleo são as que devem ser realizadas pelo núcleo.
 thread, a carga de gerência imposta ao núcleo é pequena e não depende do número de threads dentro da aplicação. Em compen-
 sação, o modelo de threads N:1 apresenta problemas em algumas situações, sendo o mais grave deles relacionado às operações
 de entrada/saída. Outro problema desse modelo diz respeito à divisão de recursos entre as tarefas.
+
+## Questão 11
+  O modelo de threads 1:1 (multi-thread) é adequado para a maioria das situações e atende bem às necessidades das aplica-
+ções interativas e servidores de rede. No entanto, é pouco escalável: a criação de um grande número de threads impõe uma
+carga significativa ao núcleo do sistema, inviabilizando aplicações com muitas tarefas (como grandes servidores Web e si-
+mulações de grande porte)
+
+## Questão 12
+
+  a
+  b
+  b
+  a
+  c
+  b
+  a
+  c
+  c
+
+## Questão 13
