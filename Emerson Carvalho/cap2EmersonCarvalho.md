@@ -17,28 +17,45 @@ referentes aos processos ativos no sistema.
 5. Indique se cada uma das transições de estado de tarefas a seguir definidas é possível ou não. Se a transição for possível, dê um exemplo de situação na qual ela ocorre (N: Nova, P: pronta, E: executando, S: suspensa, T: terminada).
 
     • E → P   Possível
+
     • E → S   Possível
+
     • S → E   Não Possível
+
     • P → N   Não Possível
+
     • S → T   Não Possível
+
     • E → T   Possível
+
     • N → S   Não Possível
+
     • P → S   Não Possível
 
 6. Relacione as afirmações abaixo aos respectivos estados no ciclo de vida das tarefas (N: Nova, P: Pronta, E: Executando, S: Suspensa, T: Terminada):
 
     [N] O código da tarefa está sendo carregado.
+
     [P] A tarefas são ordenadas por prioridades.
+
     [N] A tarefa sai deste estado ao solicitar uma operação de entrada/saída.
+
     [T] Os recursos usados pela tarefa são devolvidos ao sistema.
+
     [S] A tarefa vai a este estado ao terminar seu quantum.
+
     [P] A tarefa só precisa do processador para poder executar.
+
     [S] O acesso a um semáforo em uso pode levar a tarefa a este estado.
+
     [E] A tarefa pode criar novas tarefas.
+
     [E] Há uma tarefa neste estado para cada processador do sistema.
+
     [S] A tarefa aguarda a ocorrência de um evento externo.
 
 8. Indique quantas letras “X” serão impressas na tela pelo programa abaixo quando for executado com a seguinte linha de comando:
+    
     a.out 4 3 2 1
 
     R:  XXXXX
