@@ -19,8 +19,8 @@ II. Na comunicação síncrona ou bloqueante, o receptor espera até receber a m
 III. Um mecanismo de comunicação semi-bloqueante com prazo t = ∞ equivale a um mecanismo bloqueante.
  IV. Na comunicação síncrona ou bloqueante, o emissor retorna uma mensagem de erro caso o receptor não esteja pronto para receber a mensagem. 
 V. A comunicação com semântica bloqueante usando canais sem buffer é chamada Rendez-Vous.
- As asserções corretas são: 
 
+ As asserções corretas são: 
 (a) I, III 
 (x) II, III, V - coretta
 (c) I, II, IV 
@@ -31,11 +31,13 @@ V. A comunicação com semântica bloqueante usando canais sem buffer é chamada
 
 4. Em relação à sincronização na comunicação entre processos, podemos afirmar que: 
 I. Na comunicação semi-bloqueante, o emissor espera pelo envio dos dados, mas o receptor não.
- II. Se o canal de comunicação tiver capacidade nula, emissor e receptor devem usar mecanismos não-bloqueantes. 
+II. Se o canal de comunicação tiver capacidade nula, emissor e receptor devem usar mecanismos não-bloqueantes. 
 III. A comunicação não-bloqueante em ambos os participantes só é viável usando canais de comunicação com buffer não-nulo.
- IV. Os pipes do UNIX são um bom exemplo de comunicação bloqueante. 
+IV. Os pipes do UNIX são um bom exemplo de comunicação bloqueante. 
 V. Um mecanismo de comunicação semi-bloqueante com prazo t = 0 equivale a um mecanismo bloqueante. 
-As asserções corretas são: 
+
+As asserções corretas são:
+
 (a) I, II, IV 
 (b) II, III 
 (c) III, IV, V 
@@ -43,13 +45,8 @@ As asserções corretas são:
 (e) III, IV
 
 
-
-
-
-
-
 5. Dadas as seguintes características dos mecanismos de comunicação:
- I. A comunicação indireta (por canais) é mais adequada para sistemas distribuídos. 
+I. A comunicação indireta (por canais) é mais adequada para sistemas distribuídos. 
 II. Canais com capacidade finita somente são usados na definição de algoritmos, não sendo implementáveis na prática. 
 III. Na comunicação direta, o emissor envia os dados diretamente a um canal de comunicação. 
 IV. Na comunicação por fluxo, a ordem dos dados enviados pelo emissor é mantida do lado receptor. 
@@ -65,13 +62,11 @@ As asserções erradas são:
 
 
 
-
-
 6. Dadas as seguintes características dos mecanismos de comunicação:
- I. Na comunicação por troca de mensagens, o processo emissor copia o conteúdo da mensagem no buffer do processo receptor. 
+I. Na comunicação por troca de mensagens, o processo emissor copia o conteúdo da mensagem no buffer do processo receptor. 
 II. O buffer do canal de comunicação entre dois processos distintos é geralmente mantido pelo núcleo do sistema operacional. 
 III. Se a capacidade do buffer do canal de comunicação for considerada infinita, somente o receptor pode se bloquear.
- IV. As filas de mensagens POSIX são um exemplo de canal de comunicação com capacidade nula. 
+IV. As filas de mensagens POSIX são um exemplo de canal de comunicação com capacidade nula. 
 V. O protocolo de rede TCP é um exemplo de comunicação por fluxo de dados. 
 
 As asserções erradas são: 
