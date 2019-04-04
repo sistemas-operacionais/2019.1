@@ -3,32 +3,29 @@
 
 1- Quais os dois principais objetivos dos sistemas operacionais? 
 
- -Abstração de recursos de hardware e gerência de recurso.
+    -Abstração de recursos de hardware e gerência de recurso.
  
 2- Por que a abstração de recursos é importante para os desenvolvedores de aplicações? Ela tem utilidade para os desenvolvedores
 do próprio sistema operacional?
 
 
-  -Acessar diretamente os recursos do hardware de um sistema pode ser uma tarefa muito complexa, devido às características 
-  específicas de cada dispositivo físico e a complexidade de suas interfaces, e isso atrapalha o desenvolvimento de aplicações,
-  por isso a abstração de recurso de hardware e importante para os desenvolvedores de aplicações, pois assim o desenvolvedor não 
-  precisa “baixar o nível “quando precisar de recursos de hardware, o próprio sistemas irá dar ferramentas  para ter acesso aos 
-  recursos mais  facilmente e mais rápido. 
+    -Acessar diretamente os recursos do hardware de um sistema pode ser uma tarefa muito complexa, devido às características 
+    específicas de cada dispositivo físico e a complexidade de suas interfaces, e isso atrapalha o desenvolvimento de 	  aplicações,por isso a abstração de recurso de hardware e importante para os desenvolvedores de aplicações, pois assim o desenvolvedor não precisa “baixar o nível “quando precisar de recursos de hardware, o próprio sistemas irá dar ferramentas  para ter acesso aos recursos mais  facilmente e mais rápido. 
   
-  -Sim.
+    -Sim.
   
   
 3-A gerência de atividades permite compartilhar o processador, executando mais de uma aplicação ao mesmo tempo.
 Identifique as principais vantagens trazidas por essa funcionalidade e os desafios a resolver para implementá-la.
+
       -Vantagens: -Evita a monopolização de recursos.  
 
-                  - Permite a construção de sistemas mais interativos. 
+       - Permite a construção de sistemas mais interativos. 
 
-                  - Fornece abstrações para sincronizar atividades interdependentes e prover formas de comunicação entre elas.
+      - Fornece abstrações para sincronizar atividades interdependentes e prover formas de comunicação entre elas.
                   
       -Dificuldades de implementação: as funcionalidades de um sistema operacional são interdependentes, ou seja, 
-      uma funcionalidade influencia em outra, por exemplo, a gerência do processador depende de aspectos da gerência de memória
-      ,assim como a gerência de memória depende da gerência de dispositivos e da gerência de proteção. 
+      uma funcionalidade influencia em outra, por exemplo, a gerência do processador depende de aspectos da gerência de   	memória assim como a gerência de memória depende da gerência de dispositivos e da gerência de proteção. 
       
       
 4-O que caracteriza um sistema operacional de tempo real? Quais as duas classificações de sistemas operacionais de tempo real 
@@ -49,6 +46,7 @@ e suas diferenças?
   
 	
 6-Seria possível construir um sistema operacional seguro usando um processador que não tenha níveis de privilégio? Por quê?
+
     -Não, pois se o processador não possuir níveis de privilegio os usuários e aplicativos teriam total acesso ao hardware 
     podendo interferir nas configurações e na gerência e isso acabaria desestabilizando o sistema inteiro. 
 
@@ -56,6 +54,7 @@ e suas diferenças?
 7-O processador Pentium possui dois bits para definir o nível de privilégio, resultando em 4 níveis distintos. A maioria dos 
 sistemas operacionais para esse processador usa somente os níveis extremos (0 e 3, ou 002 e 112). Haveria alguma utilidade 
 para os níveis intermediários? 
+
       -Sim, mas só se houvesse necessidade de processamento entre os níveis.
       
       
@@ -138,7 +137,7 @@ Quais das seguintes operações não deveriam ser permitidas em nível usuário?
 
 (c) Calcular uma exponenciação.  
 
-(d) Preencher uma área de memória do processo com zeros.-e responsabilidade do hardware   
+(d) Preencher uma área de memória do processo com zeros. -e responsabilidade do hardware   
 
 (e) Remover um arquivo do disco. 
 
