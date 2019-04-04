@@ -2,8 +2,8 @@
 
 1. Explique o que é, para que serve e o que contém um PCB - Process Control Block 
 
-  -PCB é uma estrutura de dados que armazena informações necessárias para a gerência de uma tarefa e também armazena 
-  informações relativas ao seu contexto. 
+        - PCB é uma estrutura de dados que armazena informações necessárias para a gerência de uma tarefa e também armazena 
+        informações relativas ao seu contexto. 
 
  Um PCB contém: 
 
