@@ -1,10 +1,10 @@
 2. Explique como processos que comunicam por troca de mensagens se comportam em relação à capacidade do canal de comunicação, considerando as semânticas de chamada síncrona e assíncrona.
 
-Capacidade nula (n = 0) : Caso a comunicação seja síncrona, o emissor permanece bloqueado até que o destinatário receba os
-dados, e vice-versa. Essa situação específica (comunicação síncrona com canais de capacidade nula) implica em uma forte 
-sincronização entre as partes,  Por outro lado, a comunicação assíncrona torna-se inviável usando canais de capacidade nula.
+ Capacidade nula (n = 0) : Caso a comunicação seja síncrona, o emissor permanece bloqueado até que o destinatário receba os
+ dados, e vice-versa. Essa situação específica (comunicação síncrona com canais de capacidade nula) implica em uma forte 
+ sincronização entre as partes,  Por outro lado, a comunicação assíncrona torna-se inviável usando canais de capacidade  nula.
 
-Capacidade finita (0 < n < ∞) : neste caso, uma quantidade finita (n) de dados pode ser enviada pelo emissor sem que o 
+ Capacidade finita (0 < n < ∞) : neste caso, uma quantidade finita (n) de dados pode ser enviada pelo emissor sem que o   
 receptor os consuma. Todavia, ao tentar enviar dados em um canal já saturado em uma comunicação síncrona , o emissor poderá 
 ficar bloqueado até surgir espaço no buffer e em uma comunicação  assíncrona lançará  um erro.
 
