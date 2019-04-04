@@ -12,7 +12,7 @@ do próprio sistema operacional?
   precisa “baixar o nível “quando precisar de recursos de hardware, o próprio sistemas irá dar ferramentas  para ter acesso aos 
   recursos mais  facilmente e mais rápido. 
   
-  -Sim
+  -Sim.
   
   
 3-A gerência de atividades permite compartilhar o processador, executando mais de uma aplicação ao mesmo tempo.
