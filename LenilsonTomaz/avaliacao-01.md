@@ -70,19 +70,16 @@ para os níveis intermediários?
  11-Monte uma tabela com os benefícios e deficiências mais significativos das principais arquiteturas de sistemas operacionais.
  	
 	
-    Arquiteturas  de   |    Benefícios          	   |      Deficiências 
-sistemas operacionais                          	   
+   | Arquiteturas  de sistemas operacionais      |    Benefícios          	   |      Deficiências| 
+                         	   
 												                       	   
-Sistema monolítico      -Desempenho |a robustez e a facilidade de desenvolvimento. 
+|Sistema monolítico|      |-Desempenho |a robustez e a facilidade de desenvolvimento. |
                                                     
-Sistema em camada       -Domínio das redes |Demora no pedido da aplicação. 
+|Sistema em camada|       |-Domínio das redes |Demora no pedido da aplicação.| 
                                                    
-Sistema micronúcleo     -robustez e flexibilidade|o custo associado às trocas de mensagens entre componentes 
-																									     pode ser bastante elevado 
+|Sistema micronúcleo|     |-robustez e flexibilidade|o custo associado às trocas de mensagens entre componentes pode ser bastante elevado |
                                                        
-Máquinas virtuais    -Executar diferentes sistemas|custo adicional de execução dos processos na máquina virtual. 
-										operacionais sobre o mesmo    	
-										hardware, simultaneamente	 	 
+|Máquinas virtuais|    |-Executar diferentes sistemas|custo adicional de execução dos processos na máquina virtual operacionais sobre o mesmo  hardware, simultaneamente|	 	 
 												                           
 		
 		
