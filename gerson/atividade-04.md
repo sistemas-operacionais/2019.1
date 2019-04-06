@@ -9,3 +9,16 @@ e recepção não são bloqueantes: caso a comunicação não seja possível no 
 esta retorna imediatamente com uma indicação de erro. Semissíncrona: têm um comportamento síncrono (bloqueante) 
 durante um prazo pré-definido. Caso esse prazo se esgote sem que a comunicação tenha ocorrido, a primitiva se encerra
 com uma indicação de erro.
+
+## Questão 3
+letra b;
+## Questão 4
+letra d;
+## Questão 5
+letra c;
+## Questão 6
+letra a;
+## Questão 7
+letra a;
+## Questão 8
+letra d;
