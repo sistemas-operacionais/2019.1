@@ -1,0 +1,106 @@
+1.
+
+(a)
+
+Comunicação Síncrona
+
+Desvantagens:
+
+Requer uso de computador;
+Alto custo de infraestrutura ;
+Implica uma enorme logística para preparar os meios de comunicação;
+Precisa ser agendada, perde a flexibilidade de horários.
+
+Vantagens:
+
+Interação em tempo real;
+Feedback instantâneo;
+Facilidade de uso;
+Melhor acompanhamento;
+Promove uma aprendizagem ativa.
+
+Comunicação Assíncrona
+
+Desvantagens:
+
+Requer uso de computador;
+Sem Interação - a comunicação não é feira em tempo real;
+Maior isolamento;
+Falta de motivação.
+
+Vantagens:
+
+Baixo custo;
+Eliminação da barreira da timidez;
+Facilidade de uso;
+Flexibilidade de horários e local;
+Permite mais tempo para reflexão; pesquisa e composição da mensagem.
+
+(b)
+
+Em relação à capacidade de buffering do canal de comunicação, três situações devem ser analisadas:
+
+Capacidade nula (n = 0): neste caso, o canal não pode armazenar dados; a comunicação é feita por transferência direta dos dados do emissor para o receptor, sem cópias intermediárias. Caso a comunicação seja síncrona, o emissor permanece bloqueado até que o destinatário receba os dados, e vice-versa. Essa situação específica (comunicação síncrona com canais de capacidade nula) implica em uma forte sincronização entre as partes, sendo por isso denominada Rendez-Vous (termo francês para “encontro”). Por outro lado, a comunicação assíncrona torna-se inviável usando canais de capacidade nula (conforme discutido na Seção Sincronismo - 8.3.2).
+
+Capacidade infinita (n = ∞): o emissor sempre pode enviar dados, que serão armazenados no buffer do canal enquanto o receptor não os consumir. Obviamente essa situação não existe na prática, pois todos os sistemas de computação têm capacidade de memória e de armazenamento finitas. No entanto, essa simplificação é útil no estudo dos algoritmos de comunicação e sincronização,
+pois torna menos complexas a modelagem e análise dos mesmos.
+
+Capacidade finita (0 < n < ∞): neste caso, uma quantidade finita (n) de dados pode ser enviada pelo emissor sem que o receptor os consuma. Todavia, ao tentar enviar dados em um canal já saturado, o emissor poderá ficar bloqueado até surgir espaço no buffer do canal e conseguir enviar (comportamento síncrono) ou receber um retorno indicando o erro (comportamento assíncrono). A maioria dos sistemas reais opera com canais de capacidade finita.
+
+(c)
+
+Na abordagem baseada em mensagens, cada mensagem consiste de um pacote de dados que pode ser tipado ou não. Esse pacote é recebido ou descartado pelo receptor em sua íntegra; não existe a possibilidade de receber “meia mensagem”
+
+Caso a comunicação seja definida como um fluxo contínuo de dados, o canal de comunicação é visto como o equivalente a um arquivo: o emissor “escreve” dados nesse canal, que serão “lidos” pelo receptor respeitando a ordem de envio dos dados. Não há separação lógica entre os dados enviados em operações separadas: eles podem ser lidos byte a byte ou em grandes blocos a cada operação de recepção, a critério do receptor.
+
+(d)
+
+1:1: quando exatamente um emissor e um receptor interagem através do canal de comunicação; é a situação mais frequente, implementada por exemplo nos pipes UNIX e no protocolo TCP.
+
+M:N: quando um ou mais emissores enviam mensagens para um ou mais receptores.
+
+2.
+
+Síncrona (ou bloqueante): quando as operações de envio e recepção de dados bloqueiam (suspendem) as tarefas envolvidas até a conclusão da comunicação: o emissor será bloqueado até que a informação seja recebida pelo receptor, e vice-versa.
+
+Assíncrona (ou não-bloqueante): em um sistema com comunicação assíncrona, as primitivas de envio e recepção não são bloqueantes: caso a comunicação não seja possível no momento em que cada operação é invocada, esta retorna imediatamente com uma indicação de erro. Deve-se observar que, caso o emissor e o receptor operem ambos de forma assíncrona, torna-se necessário criar um canal ou buffer para armazenar os dados da comunicação entre eles. Sem esse canal, a comunicação se tornará inviável, pois raramente ambos estarão prontos para comunicar ao mesmo tempo. 
+
+3.
+
+(c) I, II, IV
+
+I está errada pois a semi-bloqueante só recebe dados uma vez que o processo de comunicação esteja concluído, já que inicialmente funciona como síncrona durante um prazo pré-definido
+II está errada pois o receptor só aguarda até que a informação seja recebida, sem receber qualquer mensagem 
+IV está errada pois  o emissor retorna uma mensagem de erro apenas na comunicação assíncrona
+
+4.
+
+(c) III, IV, V
+
+I está errada pois na verdade o receptor aguarda o envio dos dados e bloqueia as demais tarefas até o recebimento dos dados
+II está errada pois a comunicação assíncrona torna-se inviável usando canais de capacidade nula 
+
+5.
+
+(b) II, III
+
+II está errada pois a maioria dos sistemas reais opera com canais de capacidade finita
+III está errada pois na comunicação direta, o emissor envia os dados diretamente ao receptor, não sendo necessário o envio de dados a um canal ou buffer
+
+6.
+
+(c) I, IV
+
+I está errada pois o emissor simplesmente envia os dados para o receptor, que os recebe ou rejeita na íntegra, sem copiar os dados
+IV está errada, pois o POSIX necessita do armazenamento de dados para execução de determinadas threads
+
+7.
+
+(c) II, IV
+
+II está errada pois a memória compartilhada serve para que diferentes programas consigam acessar uma memória e compartilhar informações entre eles, sendo no máximo 2 processadores distintos, inviabilizando a comunicação em rede
+IV está errada pois os pipes Unix abrem um FIFO para escrita, outro para leitura, sendo considerado um processo 1:1
+
+
+8.
+
