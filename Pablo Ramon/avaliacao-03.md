@@ -1,4 +1,4 @@
-## Avaliação 03 - Páginas [12 - 15]
+## Avaliação 03 - Capítulo 08 - Comunicação entre tarefas
 ## Discente: **Pablo Ramon Varela de Souza**
 
 1. a) A principal vantagem da comunicação bloqueante (síncrona), é que não haverá erros por causa do receptor não estar disponível
@@ -18,11 +18,19 @@
       A desvantagem é que isso pode causar a necessidade de vários reenvios por parte do transmissor.
       Na comunicação em fluxo o canal é usado como um arquivo, assim o transmissor **escreve** no canal e o receptor **lê** do canal
       quando fica disponível.  
-        
-   d)   
-   e)  
+          
+   e) Na comunicação 1:1, não é necessário tratar colisões de comunicação por exemplo, mas só um receptor recebe essa msg ou fluxo por vez, já na M:N eu posso ter a mesma informação sendo mandada simultâneamente para vários receptores, mas há um maior perigo de ocorrer algum problema de sincronização.
      
-2. Na comunicação síncrona, o processo que usa mensagens para se comunicar usa o canal com capacidade nula, já que não é de seu
-   interesse guardar as informações durante o envio. Nesse caso, quando um pacote é perdido ele tem de ser reenviado pelo emissor.
-   Na comunicação assíncrona, o processo usa o canal com capacidade finita, então ele empilha mensagens no buffer até chegar a capacidade
-   ou acabar a transmissão.
+2. Usando capacidade nula, o emissor teria de enviar todos as mensagens de uma vez, sendo assim, a utilização do método síncrono seria mais vantajosa, sendo que na forma assíncrona o emissor teria que checar se o receptor está pronto para receber todo o tempo.  
+Usando capacidade infinita, o emissor poderia enviar as mensagens despreocupadamente, enquanto o receptor poderia receber assim que ele estivesse disponível sabendo que as informações sempre estariam disponíveis no buffer.  
+Usando a capacidade finita (real), o emissor a cada emissão deve checar se o buffer está cheio, se ele não estiver a mensagem é enviada se não ele deve esperar até que o buffer fique vazio. O receptor ainda teria a liberdade de consumir as informações como fosse necessário.  
+  
+3. b) Canais de capacidade finita, e nula são os únicos que podem ser implementados realmente, sendo o de capacidade finita amplamente utilizado na prática.  
+c) Na comunicação direta, o emissor envia direto para o receptor, e não para um canal.  
+e) Não é o núcleo e sim o canal de comunicação.  
+  
+4. a) Isso ocorre dentro de um prazo pré-definido.  
+c) Ele se equipara a um sistema de comunicação não-bloqueante.
+d) Isso ocorre na comunicação não bloqueante.  
+e) Eles devem usar sistemas bloqueantes.
+f) É melhor com buffer, mas a implementação é possível mesmo sem o buffer.
