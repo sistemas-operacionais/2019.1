@@ -1,4 +1,4 @@
-# Exercicios Capitulo 3
+# Exercicios 3
 ## Aluno: Emerson Breno Martins Carvalho
 
 3 - **b) II, III, V**
