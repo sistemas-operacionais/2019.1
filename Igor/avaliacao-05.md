@@ -6,8 +6,7 @@
 
 2.  **Pipe** é um dos muitos mecanismos de comunicação existente entre processores simples no ambiente **UNIX**. Quando falamos de interface de linha de comandas, o **pipe** é usado para criar uma conexão entre a saída padrão (stdout) de um comando à entrada padrão (stdin) de outro comando, assim a comunicação é realizada.
 
-3. **Núcleo:** Reponsável pelas chamadas do sistema, uma vez que não existe acesso a variáveis comuns.
-
+3. Usando chamadas de sistema atráve do núcleo, é possível realizar uma comunicação entre as tarefas, uma vez que não existe a possibilidade de acesso a variáveis comuns a ambos. Por outro lado, usar tal abordagem pode não ter um papel tão rico caso a comunicação possua uma grande quantidade de informações, ou envolva muitos procesos. Para esass situações, faz-se necessário uma área na memória em comum para ser acessa de maneira direta e eficaz pelos processos interessados, sem nenhum custo adicional da intermediação feita pelo núcleo.
 
 4. *D) Processos que se comunicam por memória compartilhada podem acessar a mesma área da RAM.*  
 **Errado**, pois os processos que fazem comunicação por memória compartilha podem acessar a mesma área do núcleo.  
