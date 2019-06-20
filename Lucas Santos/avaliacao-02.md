@@ -1,5 +1,4 @@
 >### Cap. 2 -  Gerência de atividades
-####Respostas
 
 1. _PCB (Process Control Block) ou TCB (Task Control Block)_ é a nomeclatura dada à estrutura de dados responsável por armazenar as informações relativas ao seu contexto e os demais dados necessários à sua gerência de uma determinada tarefa presente no sistema, em outras palavras, essa estrutura de dados representa o núcleo.  
   __Em um PCB está contido:__  

@@ -1,5 +1,4 @@
 >### Cap. 3 -  Comunicação entre tarefas
-#### Respostas
 1.  
      **a)** Comunicação bloqueante: **O envio e a recepção bloqueiam as tarefas no momento que são envidas, deste modo, acaba impedindo possível interferência na hora de trocar as mensagens.**  
      

@@ -1,6 +1,4 @@
-
->### Cap. 4
-#### Mecanismos de comunicação - Respostas
+>### Cap. 4 - Mecanismos de comunicação - Respostas
 
 1.  Nos primordios da implementação **UNIX System V** as filas de mensagem foram criadas, atualmente, a maioria dos Systems suportam elas. Em contrapartida ao **System V** existe o padrão **POSIX** que define uma interface para manipulação de filas. Um bom exemplo de implementação do conceito de fila é uma caixa de mensagem eletrônica.  
 

@@ -1,6 +1,4 @@
-
 >### Cap. 1 - Conceitos Básicos
-#### Respostas
 
 1. Abstração de recursos e Gerência de recursos.
 2. A abstração de recursos é importante, pois, permite que o desenvolvedor evolua de uma maneira
