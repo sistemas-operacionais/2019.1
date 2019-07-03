@@ -47,3 +47,29 @@
 #### P. 21, questão 8.
 
 *Em progresso*
+
+---
+
+>### Capítulo 16 - Alocação de memória  
+
+#### P. 9, questão 5.
+
+* Alternativa correta: B)
+
+---
+
+>### Capítulo 17 - Paginação em disco 
+
+#### P. 19, questão 1.
+
+*  Uma falta de página é uma exceção disparada **(throw)** pelo hardware quando um programa acessa uma página mapeada no espaço de memória virtual, mas que não foi carregada na memória física do computador.  
+
+* Possiveis causas:
+
+1. A página correspondente ao endereço requisitado não está carregada na memória;
+1. A página correspondente ao endereço de memória acessado está carregada, mas o seu estado corrente não foi atualizado no hardware;
+1. A página não é parte do programa, e portanto não é mapeada na memória do programa;
+1. O programa não tem privilégios suficientes para ler ou escrever a página;
+1. O acesso à página é legal, mas está mapeada como página sob demanda;
+
+* Geralmente, o programa que recebe a exceção deve trata-lá, caso contrário, o S.O realiza um padrão já implementado para tratar, deste modo, executa o término do processo que causou e mostra ao usuário que o programa apresenta um mal funcionamento, dependendo do S.O essa mensagem pode ser mostrando de diferentes maneiras, entretanto, todas com a mesma finalidade.
