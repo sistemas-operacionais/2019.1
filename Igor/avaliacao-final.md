@@ -38,7 +38,7 @@
 
 #### P. 21, questão 1.
 
-* Endereço lógico é o um endereço obtido quando o software está em execução, como endereços lógicos iguais podem existir endereços físicos divergentes entre sí, uma vez que, softwares podem está contidos em espaços de endereçamento distintos. Logo, o endereço lógico é o endereço a nível de software, gerado na fase de compilação, o mesmo visualiza a memória como parte unica para o software. A realocação dinâmica faz-se necessário utilização de um endereço base, em outras palavras, o endereço fisico e os endereços lógicos como offset, obtendo-se o endereço físico para cada endereço lógico. Portanto, o endereço físico acaba se tornando um endereço que representa uma localização válida e real na memória.
+* Endereço lógico é o endereço obtido quando o software está em execução, como endereços lógicos iguais podem existir endereços físicos divergentes entre sí, uma vez que, softwares podem está contidos em espaços de endereçamento distintos. Logo, o endereço lógico é o endereço a nível de software, gerado na fase de compilação, o mesmo visualiza a memória como parte unica para o software. A realocação dinâmica faz-se necessário utilização de um endereço base, em outras palavras, o endereço fisico e os endereços lógicos como offset, obtendo-se o endereço físico para cada endereço lógico. Portanto, o endereço físico acaba se tornando um endereço que representa uma localização válida e real na memória.
 
 #### P. 21, questão 7.
 
