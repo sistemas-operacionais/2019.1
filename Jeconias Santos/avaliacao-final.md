@@ -8,7 +8,9 @@
     - (1) página 10, questão 4. Uma vez detectado um impasse, quais as abordagens possíveis para
 resolvê-lo? Explique-as e comente sua viabilidade.
 
-        - Resposta: Partindo do princípio que nenhuma medida preventiva foi adotada para prevenir ou evitar impasses e as tarefas executam normalmente suas atividades, alocando e liberando recursos conforme suas necessidades temos duas soluções para resolver um impasse. Eliminar tarefas: Uma ou mais tarefas envolvidas no impasse são eliminadas, liberando seus recursos para que as demais tarefas possam prosseguir. Retroceder tarefas: Uma ou mais tarefas envolvidas no impasse têm sua execução parcialmente desfeita (uma técnica chamada rollback), de forma a fazer o sistema retornar a um estado seguro anterior ao impasse. A última opção para solução de impasses é menos viável, pois é necessário salvar periodicamente o estado da tarefa para que seja possível voltar ao estado anterior quando necessário. Além disso, operações envolvendo a rede ou interações com o usuário podem ser muito difíceis ou mesmo impossíveis de retroceder.
+        - Resposta:
+
+            Partindo do princípio que nenhuma medida preventiva foi adotada para prevenir ou evitar impasses e as tarefas executam normalmente suas atividades, alocando e liberando recursos conforme suas necessidades temos duas soluções para resolver um impasse. Eliminar tarefas: Uma ou mais tarefas envolvidas no impasse são eliminadas, liberando seus recursos para que as demais tarefas possam prosseguir. Retroceder tarefas: Uma ou mais tarefas envolvidas no impasse têm sua execução parcialmente desfeita (uma técnica chamada rollback), de forma a fazer o sistema retornar a um estado seguro anterior ao impasse. A última opção para solução de impasses é menos viável, pois é necessário salvar periodicamente o estado da tarefa para que seja possível voltar ao estado anterior quando necessário. Além disso, operações envolvendo a rede ou interações com o usuário podem ser muito difíceis ou mesmo impossíveis de retroceder.
 
     - (2) página 11, questão 8. 8. Nos grafos de alocação de recursos da figura a seguir, indique o(s)
 ciclo(s) onde existe um impasse:
@@ -55,6 +57,7 @@ tipo de informação centralizada não devem ser usadas.
 momentos: codificação, compilação, ligação, carga e execução.
 
         - Resposta:
+
             Codificação: O software escolhe a posição de cada variavél e do código-fonte do software;
 
             Compilação: Compilador escolhe a posição das variavéis na memória, código-fonte é conhecido no momento que o processo de compilação ocorre, evitando possíveis conflitos de endereços na memória;
@@ -67,6 +70,7 @@ momentos: codificação, compilação, ligação, carga e execução.
 
     - (5) questão 2. Como é organizado o espaço de memória de um processo?
         - Resposta:
+
             O processo é organizado em: Text, Data, Heap e Stack.
 
             Text: Responsável por conter o código-fonte a ser executado durante o processo, gerado durante a compilação e a inclusão de bibliotecas no código-fonte;
@@ -91,7 +95,9 @@ momentos: codificação, compilação, ligação, carga e execução.
     - (6) questão 1. Explique a diferença entre endereços lógicos e endereços físicos e as razões
 que justificam o uso de endereços lógicos.
 
-        - Resposta: Endereços físicos (ou reais) são os endereços dos bytes de memória física do computador. Estes endereços são definidos pela quantidade de memória disponível na máquina. Já os endereços lógicos (ou virtuais) são os endereços de memória usados pelos processos e pelo sistema operacional e, portanto, usados pelo processador durante a execução. Estes endereços são definidos de acordo com o espaço de endereçamento do processador. Uma das razões para utilizar endereços lógicos é ocultar a organização complexa da memória física e simplificar os procedimentos de alocação da memória aos processos.
+        - Resposta: 
+
+            Endereços físicos (ou reais) são os endereços dos bytes de memória física do computador. Estes endereços são definidos pela quantidade de memória disponível na máquina. Já os endereços lógicos (ou virtuais) são os endereços de memória usados pelos processos e pelo sistema operacional e, portanto, usados pelo processador durante a execução. Estes endereços são definidos de acordo com o espaço de endereçamento do processador. Uma das razões para utilizar endereços lógicos é ocultar a organização complexa da memória física e simplificar os procedimentos de alocação da memória aos processos.
 
     - (7) página 7. Considerando a tabela de segmentos a seguir (com valores em decimal),
 calcule os endereços físicos correspondentes aos endereços lógicos 0:45, 1:100, 2:90,
@@ -117,11 +123,11 @@ informe os endereços físicos correspondentes aos endereços lógicos 414, 741,
         |--------|---|---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|
         | Quadro | 3 | 12| 6 | – | 9 | – | 2 | – | 0 | 5 | –  | –  | –  | 7  | –  | 1  |
 
-        -Resposta
+        - Resposta:
 
-            | Página | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
-            |--------|---|---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|
-            | Quadro | 3 - 4.000 | 12| 6 | – | 9 | 741 | 2 - 1.995 - 6.633 | – | 0 | 5 | –  | 1.995  | –  | 7  | 414  | 1  |
+            | Página | 0         | 1 | 2 | 3 | 4 | 5   | 6                 | 7  | 8  | 9  | 10 | 11    | 12 | 13 | 14  | 15 |
+            |--------|-----------|---|---|---|---|-----|-------------------|----|----|----|----|-------|----|----|-----|----|
+            | Quadro | 3 - 4.000 | 12| 6 | – | 9 | 741 | 2 - 1.995 - 6.633 | –  | 0  | 5  | –  | 1.995 | –  | 7  | 414 | 1  |
 
 
 `Data de entrega: 05/07/2019`
