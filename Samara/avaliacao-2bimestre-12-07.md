@@ -21,6 +21,22 @@ e) **Incorreta**. Ambos são arquivos de código. O ELF (Executable and Linking 
 
 ## Respostas do Capítulo 23 - Uso de arquivos
 
+5 - **Acesso sequencial**: os dados são sempre lidos e/ou escritos em sequência, do início ao final do arquivo. É o mais utilizado em quase todos os sistemas operacionais do mercado e é a forma mais usual de acesso a arquivos.  
+**Acesso aleatório**: É indicado a posição no arquivos onde a leitura ou escrits deve ocorrer sem a necessidade do ponteiro que indica o início do arquivo (como no acesso sequencial). Assim caso já conheça a posição do dado no arquivo não há necessidade de percorrê-lo sequencialmente. É usado em gerenciadores de bancos de dados e aplicações congêneres (que precisam acessar rapidamente as posições do arquivo correspondetes ao registros desejados em uma operação).  
+**Acesso mapeado em memória**: o arquivo é associado a um vetor de bytes (ou de registros) de mesmo tamanho na memória principal, de forma que cada posição do vetor corresponda à sua posição equivalente no arquivo. Usado pelo núcleo para carregar código executável (programas e bibliotecas) na memória.  
+**Acesso indexado**: Os dados do arquivo são armazenados em registros com chaves (índices) associados a eles, e podem ser recuperados usando essas chaves, como em um banco de dados relacional. A maioria dos sistemas operacionai não implementa essa funcionalidade diretamente no núcleo, mas ela pode ser obtida através de bibliotecas como BerkeleyDB ou SQLite.  
+
+6 - **Travas obrigatórias**: se um processo obtiver a trava de um arquivo, outros processos que solicitarem acesso ao mesmo arquivo serão suspensos até que aquela trava seja liberada.  
+**Travas recomendadas**: não são impostas pelo núcleo do sistema operacional, mas gerenciadas pelo suporte de execução (bibliotecas). Os processos envolvidos no acesso aos mesmos arquivos devem travá-los explicitamente quando forem acessá-los.  
+**Travas exclusivas**: enquanto uma trava exclusiva estiver ativa, nenhum outro processo poderá obter outra trava sobre o mesmo arquivo.  
+**Travas compartilhadas**:  impedem outros processos de criar travas exclusivas sobre aquele arquivo, mas permitem a existência de outras travas compartilhadas.  
+
+7 - **Semântica imutável**: de acordo com esta semântica, se um arquivo pode ser compartilhado por vários processos, ele é marcado como imutável, ou seja, seu conteúdo somente pode ser lido e não pode ser modificado.  
+**Semântica UNIX**: toda modificação em um arquivo é imediatamente visível a todos os processos que mantêm aquele arquivo aberto. É a mais comum em sistemas de arquivos locais.  
+**Semântica de sessão**: considera que cada processo usa um arquivo em uma sessão, que inicia com a abertura do arquivo e que termina com seu fechamento. Modificações em um arquivo feitas em uma sessão somente são visíveis na mesma seção e pelas sessões que iniciarem depois do encerramento da mesma.  
+**Semântica de transação**: uma transação é uma sequência de operações de leitura e escrita em um ou mais arquivos emitidas por um processo e delimitadas por comandos de início e fim de transação (begin ... end). Todas as modificações parciais do arquivo durante a
+execução de uma transação não são visíveis às demais transações, somente após sua conclusão.  
+
 ## Respostas do Capítulo 24 - Sistema de arquivos
 
 ## Respostas do Capítulo 25 - Diretórios e atalhos
