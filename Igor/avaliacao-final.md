@@ -6,11 +6,21 @@
 
 #### P. 11, questão 8.
 
-*Em progresso*
+* Figura 1. Impasse registrado, uma vez que **t1** necessita do recurso de **r2**, entretanto, **t2** retem este recurso. Por sua vez, **t2** necessita do recurso **r1**, mas o **t1** o possuí. 
+
+* Figura 2. Impasse registrado, **t** necessita de **r2**, entretanto, **t2** está consumindo. Por outro lado, **t2** necessita de **r3**, mas, ele está sendo utilizdo por **t3** em conjunto com **t4**. **t3** necessita de **r1**, mas **t1** está consumindo.
 
 #### P. 11, questão 9.
 
-*Em progresso*
+* Exclusão mútua: Os automóveis em sentidos divergentes - linhas verticais e horizontais - não devem acessar o mesmo cruzamento ao mesmo tempo;  
+
+Posse e espera: Os automóveis que estão em um cruzamento, solicitam, acesso ao outro cruzamento sem liberar o cruzamento que ele está ocupando;  
+
+Não-preempção: Os automóveis que ocupam um cruzamento só libera, quando ocorrer uma decisão;  
+
+Espera circular: Os automóveis vermelhos dependente da liberação do cruzamento dos automóveis azuis, que depende dos automóveis verdes, que depende dos automóveis amarelos e os automóveis amarelos dependem dos automóveis vermelhos, entrando em um ciclo (loop) de esperas contínuas;  
+
+A regra para evitar o impasse: Torna-se notório o uso de um recurso compartilhado nos cruzamento, facilitando assim, uma organização entre as vias (horizontais e verticais), por fim, cada cruzamento que possa chegar a garantir um conflito, deve ter um semáforo para informar se está livre/fechado;
 
 ---
 
@@ -26,11 +36,11 @@
 
 #### P. 10, questão 2.
 
-* O processo é organizado em: **text, data, heap, slock**  
+* O processo é organizado em: **text, data, heap, stack**  
 * Text: Responsável por conter o código-fonte a ser executado durante o processo, gerado durante a compilação e a inclusão de bibliotecas no código-fonte;  
 * Data: Responsável por conter as estáticas geradas pelo uso de softwares;  
 * Heap: Responsável por armazenar os dados para alocação dinâmica: calloc, malloc, free;  
-* Slock: Responsável por mater a pilha de execução do processo;    
+* Stack: Responsável por mater a pilha de execução do processo;    
 
 ---
 
@@ -42,11 +52,16 @@
 
 #### P. 21, questão 7.
 
-*Em progresso*
+| **Segmento Lógico** | **0** | **1** | **2** | **3** | **4** |
+|--------------|-------|-------|-------|-------|-------|
+| Offset Lógico         | 45    | 100   | 90     | 1.900  | 200  |
+| Endereço Físico       | 89    | 300   | 90     | Violação de segmentação  | 1.400 |
 
 #### P. 21, questão 8.
 
-*Em progresso*
+| **Página** | **0**     | **1** | **2** | **3** | **4** | **5** | **6**             | **7** | **8** | **9** | **10** | **11** | **12** | **13** | **14** | **15** |
+|------------|-----------|-------|-------|-------|-------|-------|-------------------|-------|-------|-------|--------|--------|--------|--------|--------|--------|
+| Quadro     | 3 - 4.000 | 12    | 6     | -     | 9     | 741   | 2 - 1.995 - 6.633 | -     | 0     | 5     | -      | 1.995  | -      | 7      | 414    | 1      |
 
 ---
 
@@ -73,3 +88,8 @@
 1. O acesso à página é legal, mas está mapeada como página sob demanda;
 
 * Geralmente, o programa que recebe a exceção deve trata-lá, caso contrário, o S.O realiza um padrão já implementado para tratar, deste modo, executa o término do processo que causou e mostra ao usuário que o programa apresenta um mal funcionamento, dependendo do S.O essa mensagem pode ser mostrando de diferentes maneiras, entretanto, todas com a mesma finalidade.
+
+
+>### Capítulo 19 - Hardware de entrada/saída
+
+* Leitura feita! 
