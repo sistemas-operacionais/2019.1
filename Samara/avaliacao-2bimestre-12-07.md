@@ -39,4 +39,21 @@ execução de uma transação não são visíveis às demais transações, somen
 
 ## Respostas do Capítulo 24 - Sistema de arquivos
 
+8 - **Dispositivos**: Responsáveis pelo armazenamento de dados.  
+**Controladores**: são os circuitos eletrônicos dedicados ao controle dos dispositivos físicos.  
+**Drivers**: interagem com os controladores de dispositivos para configurá-los e realizar as
+transferências de dados entre o sistema operacional e os dispositivos.  
+**Gerência de blocos**: gerencia o fluxo de blocos de dados entre as camadas superiores e os dispositivos de armazenamento.
+**Alocação de arquivos**: realiza a alocação dos arquivos sobre os blocos lógicos oferecidos
+pela camada de gerência de blocos.  
+**VFS (Virtual File System)**: constrói as abstrações de diretórios e atalhos, além de gerenciar as permissões associadas aos arquivos e
+as travas de acesso compartilhado. Mantém o registro de cada arquivo aberto pelos processos.  
+**Interface do sistema de arquivos**: conjunto de chamadas de sistema oferecidas aos processos do espaço de usuários para a criação e manipulação de arquivos.  
+**Bibliotecas de entrada/saída**: usam as chamadas de sistema da interface do núcleo para construir funções padronizadas de acesso a arquivos para cada linguagem de programação.  
+
+9 - No bitmap um pequeno conjunto de blocos na área reservada do volume é usado para manter um mapa de bits. Nesse mapa, cada bit
+representa um bloco lógico da partição, que pode estar livre ou ocupado. Ele tem como vantagens ser simples de implementar e ser bem compacto.
+
 ## Respostas do Capítulo 25 - Diretórios e atalhos
+
+10 - Uma diferença entre eles é o caractere separador de nomes no caminho. No sistema Windows usa como separador o caractere “\”, enquanto sistemas UNIX usam o caractere “/”. Outra diferença é que internamente a lista ou índice do diretório pode ser implementado como uma tabela simples como é o caso do MS-DOS e do Ext2(Linux). Essa implementação é mais simples porém possui baixo desempenho. Sistemas de arquivos mais sofisticados como o Ext4, ZFS e NTFS usam estrutura de dados com maior desempenho de busca como hashes e árvores.
