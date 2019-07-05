@@ -13,11 +13,11 @@ parte de resoluções já executadas.
 necessita do recurso r1 mas o t1 o detem. Na figura da esquerda existe um impasse aonde t1 necessita de r2 mas t2 esta utilizando-o
 t2 necessita de r3 mas ele está sendo utilizado por t3 e t4 e t3 precisa de r1 porem t1 está utilizando-o.  
 
-3 - Existe exclusão mútua porque as ruas verticais não podem ser utilizadas ao mesmo tempo que as ruas horizontais.
-Existe posse e espera porque os carros que estão nas ruas verticais podem solicitar o acesso às ruas horizontais sem precisar
-sair liberar as verticais e vice-versa.
-Existe não-preempção porque os carros podem liberar as avenidas quando quiserem, não há nada que remova eles a força.
-Existe espera circular porque os carros precisam que os outro carros liberem o recurso enquanto estes não podem libera-lo
+3 - Existe **exclusão mútua** porque as ruas verticais não podem ser utilizadas ao mesmo tempo que as ruas horizontais.
+Existe **posse e espera** porque os carros que estão nas ruas verticais podem solicitar o acesso às ruas horizontais sem precisar
+liberar as verticais e vice-versa.
+Existe **não-preempção** porque os carros podem liberar as avenidas quando quiserem, não há nada que remova eles a força.
+Existe **espera circular** porque os carros precisam que os outro carros liberem o recurso enquanto estes não podem libera-lo
 até que os demais liberem os outro recursos.  
 Uma regra simples que pode ser utilizada é só podem executar suas tarefas ao mesmo tempo os carros das ruas verticais
 por um determinado tempo, devendo após esse tempo esperar enquanto os carros das ruas horizontais executam suas tarefas
@@ -43,4 +43,8 @@ pelo compilador no momento da compilação para evitar conflitos. **Na ligação
 
 ## Respostas do Capítulo 16 - Alocação de Memória
 
+9 - Alternativa B está correta porque primeiro a área de 5MB irá para a maior área possível que é a B4 que possue 30MB, deixando um espaço de 25MB. Quando for alocar a área de 10MB a maior área disponível continua sendo a B4, após a alocação a área B4 fica com **15MB restantes**. Ao alocar a área de 2MB a maior área disponível é a agora a B6 com 20MB livres.
+
 ## Respostas do Capítulo 17 - Paginação em Disco
+
+10 - Falta de página é quando uma página, um conjunto de páginas ou um segmento de memória são movidas para o disco. Quando um processo tenta acessar uma dessas páginas a MMU gera uma interrupção de falta de página e o núcleo do SO recarrega a página faltante na memória.
