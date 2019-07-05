@@ -20,7 +20,7 @@ ciclo(s) onde existe um impasse:
             Na imagem da esquerda, o impasse acontece no seguinte ciclo: t1 _requer_ r2 _pertence_ t2 _requer_ r1 _pertence_ t1. Nesse contexto, o impasse irá acontecer pelo simples motivo de que nenhuma tarefa vai liberar o recurso que possui sem antes receber o outro recurso.
 
             Na imagem da direito eu acredito que não existe um impasse pelo simples motivo:
-            r2 e uma instância de r3 _pertence_ a t4, que por sua vez não _requer_ nenhum outro recurso, ou seja, se r2 ou r3 for solicitado por outra tarefa (tx) os recursos (r2 ou r3) serão liberados por t4.
+            r2 e uma instância de r3 _pertence_ a t4, que por sua vez não _requer_ nenhum outro recurso, ou seja, se r2 ou r3 for solicitado por outra tarefa (tx) os recursos (r2 ou r3) serão liberados por t4. Entretanto, r2 esta _pertencendo_ a t2 e t4, acredito que isso não seja possível.
 
     - (3) página 11, 9. A figura a seguir representa uma situação de impasse em um cruzamento de
 trânsito. Todas as ruas têm largura para um carro e sentido único. Mostre que as quatro condições
