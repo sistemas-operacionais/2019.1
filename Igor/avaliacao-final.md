@@ -14,13 +14,13 @@
 
 * Exclusão mútua: Os automóveis em sentidos divergentes - linhas verticais e horizontais - não devem acessar o mesmo cruzamento ao mesmo tempo;  
 
-Posse e espera: Os automóveis que estão em um cruzamento, solicitam, acesso ao outro cruzamento sem liberar o cruzamento que ele está ocupando;  
+* Posse e espera: Os automóveis que estão em um cruzamento, solicitam, acesso ao outro cruzamento sem liberar o cruzamento que ele está ocupando;  
 
-Não-preempção: Os automóveis que ocupam um cruzamento só libera, quando ocorrer uma decisão;  
+* Não-preempção: Os automóveis que ocupam um cruzamento só libera, quando ocorrer uma decisão;  
 
-Espera circular: Os automóveis vermelhos dependente da liberação do cruzamento dos automóveis azuis, que depende dos automóveis verdes, que depende dos automóveis amarelos e os automóveis amarelos dependem dos automóveis vermelhos, entrando em um ciclo (loop) de esperas contínuas;  
+* Espera circular: Os automóveis vermelhos dependente da liberação do cruzamento dos automóveis azuis, que depende dos automóveis verdes, que depende dos automóveis amarelos e os automóveis amarelos dependem dos automóveis vermelhos, entrando em um ciclo (loop) de esperas contínuas;  
 
-A regra para evitar o impasse: Torna-se notório o uso de um recurso compartilhado nos cruzamento, facilitando assim, uma organização entre as vias (horizontais e verticais), por fim, cada cruzamento que possa chegar a garantir um conflito, deve ter um semáforo para informar se está livre/fechado;
+* A regra para evitar o impasse: Torna-se notório o uso de um recurso compartilhado nos cruzamento, facilitando assim, uma organização entre as vias (horizontais e verticais), por fim, cada cruzamento que possa chegar a garantir um conflito, deve ter um semáforo para informar se está livre/fechado;
 
 ---
 
