@@ -21,11 +21,25 @@ Existe espera circular porque os carros precisam que os outro carros liberem o r
 até que os demais liberem os outro recursos.  
 Uma regra simples que pode ser utilizada é só podem executar suas tarefas ao mesmo tempo os carros das ruas verticais
 por um determinado tempo, devendo após esse tempo esperar enquanto os carros das ruas horizontais executam suas tarefas
-também por um determinado tempo liberando logo em seguida. E assim o fluxo segue.
+também por um determinado tempo liberando logo em seguida. E assim o fluxo segue.  
 
 ## Respostas do Capítulo 14 - Conceitos Básicos
 
+4 - **Na codificação** o programador escolhe ele prórpio o endereço de cada variável na memória. É usado normalmente em programas feitos
+com Assembly. **Na compilação** é o compilador que escolhe a posição das variáveis por isso todos os códigos-fontes devem sem conhecidos
+pelo compilador no momento da compilação para evitar conflitos. **Na ligação** o compilador traduz o código fonte em binário mas não define os endereções das variáveis, gerando como saída um arquivo objeto que contém o código binário e uma tabela descrevendo as variáveis, funções, seus tipos, onde estão definidas e onde são usadas. A seguir o ligador pega os arquivos objetos e define os endereções de memória dos símbolos e gera o .exe. **Na carga** também é possível definir os endereços como na carga. Nesse caso um carregador é responsável por carregar o código do processo na memória e definir os endereções de memória que devem ser utilizados. O carregador pode ser parte do núcleo do sistema operacional ou uma biblioteca ligada ao executável, ou ambos.  
+
+5 - As principais seções de memória de um processo são: TEXT, DATA, BSS, HEAP e STACK.  
+
 ## Respostas do Capítulo 15 - Hardware de Memória
+
+6 - **Endereços lógicos** são os endereços de memória usados pelos processos e pelo SO e portanto são utilizados durante a execução. Eles são definidos de acordo com o espaço de endereçamento do processador. Os **endereços físicos** são os endereços dos bytes de memória física do computador. Eles são definidos pela quantidade de memória disponível na máquina.  
+
+7 - **0:45**: 0:89  
+**1:100**: 1:300  
+**2:90**: 2:90  
+**3:1.900**: endereço lógico inválido
+**4:200**: 4:1.400
 
 ## Respostas do Capítulo 16 - Alocação de Memória
 
