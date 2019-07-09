@@ -1,0 +1,83 @@
+# Atividade Sistemas Operacionais
+### Arthur Meireles da Silva
+
+## Capítulo 13 - Impasses 
+ 
+**4. Uma vez detectado um impasse, quais as abordagens possíveis para resolvê-lo? Explique-as e comente sua viabilidade.**
+
+Quando ocorrer um impasse, o sistema deve detectá-lo, determinar quais as tarefas e recursos envolvidos e tomar medidas para desfazê-lo. 
+Uma vez detectado um impasse e identificadas as tarefas e recursos envolvidos, o sistema deve proceder à resolução do impasse:  
+Ignorar o risco:  é uma das soluções mais simples. Devido ao custo computacional necessário ao tratamento de impasses e à sua forte dependência da lógica das aplicações envolvidas, os projetistas de sistemas operacionais normalmente preferem deixar a gestão de impasses por conta dos desenvolvedores de aplicações.
+Eliminar tarefas: uma ou mais tarefas envolvidas no impasse são eliminadas, liberando seus recursos para que as demais tarefas possam prosseguir. A escolha das tarefas a eliminar deve levar em conta vários fatores, como o tempo de vida de cada uma, a quantidade de recursos que cada tarefa detém, o prejuízo para os usuários que dependem dessas tarefas, etc.  
+Retroceder tarefas:  uma ou mais tarefas envolvidas no impasse têm sua execução parcialmente desfeita (uma técnica chamada rollback), de forma a fazer o sistema retornar a um estado seguro anterior ao impasse. Para retroceder a execução de uma tarefa, é necessário salvar periodicamente seu estado, de forma a poder recuperar um estado anterior quando necessário.
+ 
+**8. Nos grafos de alocação de recursos da figura a seguir, indique o(s) ciclo(s) onde existe um impasse:**
+Grafo 1: T1 - R2 - T2 - R1 - T1
+Grafo 2: T1 - R2 - T2 - R3 - T3 - R1 - T1 
+ 
+**9. 	A figura a seguir representa uma situação de impasse em um cruzamento de trânsito. Todas as ruas têm largura para um carro e sentido único. Mostre que as quatro condições necessárias para a ocorrência de impasses estão presentes nessa situação. Em seguida, defina uma regra simples a ser seguida por cada carro para evitar essa situação; regras envolvendo algum tipo de informação centralizada não devem ser usadas.**
+
+Exclusão mútua: Os carros em sentidos diferentes (vertical e horizontal) não devem acessar o mesmo cruzamento ao mesmo tempo.
+Posse e espera: Os carros que estão em um cruzamento solicita acesso ao outro cruzamento sem liberar o cruzamento que ele está ocupando.
+Não-preempção: Os carros que ocupam um cruzamento só liberam quando assim decidir.
+Espera circular: Os carros vermelhos dependem da liberação do cruzamento dos carros azuis, que depende dos verdes, que depende dos amarelos e os amarelos dependem dos vermelhos, entrando em um ciclo de esperas.
+A regra para evitar o impasse: Podemos dizer que todo cruzamento é um recurso compartilhado, e com isso, só é possível acessar um de cada vez, dessa forma, cada recurso (cruzamento) deve ter um semáforo para informar se está liberado ou não. Portanto, cada carro deve solicitar o semáforo do recurso para prosseguir ou aguardar.
+
+ 
+## Capítulo 14 - Gestão de memória 
+
+**1. Explique em que consiste a resolução de endereços nos seguintes momentos: codificação, compilação, ligação, carga e execução.**
+
+Codificação: O software escolhe a posição de cada variável e do código-fonte do software;
+Compilação: Compilador escolhe a posição das variáveis na memória, código-fonte é conhecido no momento que o processo de compilação ocorre, evitando possíveis conflitos de endereços na memória;
+Ligação: Pega os arquivos objetos (gerado pelo compilador) com suas tabelas de símbolos, define os endereços de memória dos símbolos e gera o programa executável.
+Carga: Responsável por definir os objetos de variáveis e funções de carga do código-fonte em memória para iniciar um novo processo;
+Execução: Após todo o processo, estes, são analisados e consequentemente convertidos pelo processador para a memória final;
+
+**2. Como é organizado o espaço de memória de um processo?** 
+
+TEXT: contém o código binário a ser executado pelo processo, gerado durante a compilação e a ligação com as bibliotecas e armazenado no arquivo executável. Esta seção se situa no início do espaço de endereçamento do processo e tem tamanho fixo, calculado durante a compilação. 
+DATA: esta seção contém as variáveis estáticas inicializadas, ou seja, variáveis que estão definidas do início ao fim da execução do processo e cujo valor inicial é declarado no código-fonte do programa. Esses valores iniciais são armazenados no arquivo do programa executável, sendo então carregados para esta seção de memória quando o processo inicia. Nesta seção são armazenadas tanto variáveis globais quanto variáveis locais estáticas (por exemplo, declaradas como static em C).  
+BSS: historicamente chamada de Block Started by Symbol, esta seção contém as variáveis estáticas não-inicializadas. Esta seção é separada da seção DATA porque as variáveis inicializadas precisam ter seu valor inicial armazenado no arquivo executável, o que não é necessário para as variáveis não inicializadas. Com essa separação de variáveis, o arquivo executável fica menor.  
+HEAP: esta seção é usada para armazenar variáveis alocadas dinamicamente, usando operadores como malloc(), new() e similares. O final desta seção é definido por um ponteiro chamado Program Break, ou simplesmente break, que pode ser ajustado através de chamadas de sistema para aumentar ou diminuir o tamanho da mesma.  
+STACK: esta seção é usada para manter a pilha de execução do processo, ou seja, a estrutura responsável por gerenciar o fluxo de execução nas chamadas de função e também para armazenar os parâmetros, variáveis locais e o valor de retorno das funções. Geralmente a pilha cresce “para baixo”, ou seja, inicia em endereços maiores e cresce em direção aos endereços menores da memória. O tamanho total desta seção pode ser fixo ou variável, dependendo do sistema operacional. Em programas com múltiplos threads, esta seção contém somente a pilha do programa principal. Como threads podem ser criadas e destruídas dinamicamente, a pilha de cada thread é mantida em uma seção de memória própria, alocada dinamicamente no heap ou em blocos de memória alocados na área livre para esse fim. 
+ 
+ 
+## Capítulo 15 Hardware de memória
+ 
+**1. Explique a diferença entre endereços lógicos e endereços físicos e as razões que justificam o uso de endereços lógicos.**
+ 
+Endereços físicos (ou reais) são os endereços dos bytes de memória física do computador. Estes endereços são definidos pela quantidade de memória disponível na máquina. Já os endereços lógicos (ou virtuais) são os endereços de memória usados pelos processos e pelo sistema operacional e, portanto, usados pelo processador durante a execução. Estes endereços são definidos de acordo com o espaço de endereçamento do processador. Uma das razões para utilizar endereços lógicos é ocultar a organização complexa da memória física e simplificar os procedimentos de alocação da memória aos processos.
+Endereços lógicos são endereços de memória usados pelos processos e pelo sistema operacional e, portanto, usados pelo processador durante a execução. Estes endereços são definidos de acordo com o espaço de endereçamento do processador. 
+ 
+**7. Considerando a tabela de segmentos a seguir (com valores em decimal), calcule os endereços físicos correspondentes aos endereços lógicos 0:45, 1:100, 2:90, 3:1.900 e 4:200.**
+ 
+Physical Address = Base Ad + Offset 
+OffSet < Limit
+
+Segmento Lógico | 0 | 1 | 2 | 3 | 4
+--------- | --- | --- | --- | --- | ---
+Offset Lógico | 45 | 100 | 90 | 1900 | 200
+Limite | 89 | 300 | 90 | Violação de segmentação | 1400
+ 
+**8. Considerando a tabela de páginas a seguir, com páginas de 500 bytes , informe os endereços físicos correspondentes aos endereços lógicos 414, 741, 1.995, 4.000 e 6.633, indicados em decimal.**
+ 
+(Physical Frame * Page Size) + Offset physalF = logicalA//pageS (divisão inteira) Offset = locicalA%PageS 
+ 
+Página | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15
+--------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|--
+Quadro | 3-4000 | 12 | 6 | - | 9 | 741 | 2-1995 - 6633 | - | 0 | 5 | - | 1995 | - | 7 | 414 | 1
+ 
+ 
+## Capítulo 16 - Alocação de memória
+ 
+**5. Considere um banco de memória com os seguintes “buracos” não-contíguos: Nesse banco de memória devem ser alocadas áreas de 5MB, 10MB e 2MB, nesta ordem, usando os algoritmos de alocação First-fit, Best-fit ou Worst-fit. Indique a alternativa correta:**
+   
+(b) Se usarmos Worst-fit, o tamanho final do buraco B4 será de 15 Mbytes.  
+ 
+ 
+## Capítulo 17 - Paginação em disco
+ 
+**1. O que é uma falta de página? Quais são suas causas possíveis e como o sistema operacional deve tratá-las?**
+ 
+Se estiver, faz o acesso ao endereço físico correspondente. Caso contrário, a MMU gera uma interrupção de falta de página que desvia a execução para o sistema operacional. O sistema operacional verifica se a página é válida, usando os flags de controle da tabela de páginas. Caso a página seja inválida, o processo tentou acessar um endereço inválido e deve ser abortado. Por outro lado, caso a página solicitada seja válida, o processo deve ser suspenso enquanto o sistema transfere a página de volta para a memória RAM e faz os ajustes necessários na tabela de páginas. 
