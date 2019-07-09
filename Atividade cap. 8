@@ -1,0 +1,39 @@
+1.
+A)
+Bloqueante: Uma vantagem para o sistema operacional em ralação ao sistema de comunicação bloqueante é que o SO não precisará criar um buffer ou outro mecanismo que viabilize a comunicação tendo em vista que as tarefas só serão concluídas após a comunicação.
+Uma desvantagem é que caso ocorra algum erro na comunicação isso pode acarretar uma pausa muito longa na execução das tarefas o que não pode ocorrer em muitos softwares críticos.
+Não-Bloqueante: Uma grande vantagem de sistemas de comunicação não-bloqueantes é que o software continua sua execução independente do retorno da mensagem e quando o retorno estiver disponível o sistema fará uso desses dados, isso permite maior liberdade de execução para o SO e maior liberdade de desenvolvimento para o programador que pode tratar as exceções do sistema e permitir que o mesmo continue sua execução.
+B)
+Canais com buffer: permitem o armazenamento de mensagens que podem ser utilizadas posteriormente e isso garante a execução do sistema enquanto houver dados armazenados mesmo que ocorra algum erro na transmissão de dados, dessa forma o sistema operacional pode continuar sua execução e o programador pode buscar formas de contornar esses erros fazendo com o sistema não pare completamente sua execução. Uma desvantagem desse tipo de sistema é o consumo de memória.
+Canais sem buffer: Já os sistemas sem buffer podem ter sua execução interrompida caso ocorra algum erro na transmissão de dados, porém, os mesmos consomem menos memória tendo em vista que não armazenas dados para serem executados posteriormente.
+C)
+Comunicação por mensagem: Uma vantagem da comunicação por mensagem é que os dados são enviados em um único pacote o que diminui as chances de perdas de dados, porém pode aumentar o tamanho do pacote o que pode exigir mais dos canais de comunicação.
+Comunicação por fluxo: Uma desvantagem é que uma mesma mensagem pode ser enviada em vários pacotes e isso pode aumentar a chance de perca de dados durante a transmissão, porém essa fragmentação de dados pode facilitar o reenvio tendo em vista que só será preciso reenviar os pacotes perdidos e não todos os dados novamente.
+ D)
+Mensagem de tamanho fixo: uma vantagem das mensagens de tamanho é que é mais fácil detectar se houve perda de dados durante a transmissão, uma desvantagem é que esta mensagem sempre utilizará um tamanho fixo no canal de transmissão.
+Mensagem de tamanho variável: como vantagem temos que a mensagem conter diferentes tipos de dos tendo em vista que o seu tamanho pode variar, dessa forma o canal de comunicação pode ser melhor aproveitado mandando diferentes mensagem.
+
+
+E)
+Comunicação 1:1: a gerencia do envio e recepção de pacotes é mais fácil, porém a comunicação é mais restrita o que não é viável para alguns sistemas.
+Comunicação M:N: permite uma comunicação mais entre mais indivíduos permitindo mais interação entre sistemas que compartilham dados, porém pode aumentar a perda de dos tendo em vista que se houver mais de um receptor um desses receptores pode não receber a mensagem. Há também o aumento na complexidade de desenvolvimento desses sistemas tendo em vista que um receptor pode receber várias mensagens ou vários receptores podem receber a mesma mensagem.
+
+2) Capacidade do canal Nula: os processos síncronos enviam a mensagem e pausam a execução até que haja algum retorno, os processos assíncronos não são executados em canais nulos de comunicação;
+Capacidade do canal infinita: neste tipo de canal de comunicação o emissor sempre envia dados para o receptor, porém, comovia de regra os sistemas síncronos pausam sua execução até receberem uma resposta.
+
+Capacidade finita do canal: neste tipo de canal caso o canal já esteja saturado os sistemas assíncronos iram receber uma mensagem de erro e continuar sua execução enquanto os síncronos vão pausar sua execução até receber uma resposta a sua mensagem independente da saturação do canal de comunicação.
+
+3)
+A) correta;
+B) correta;
+C) Incorreta, na comunicação direta o emissor envia os dados diretamente ao receptor e ambos se conhecem;
+D) correta;
+E)correto;
+
+4)
+A) Incorreto, a comunicação semi-bloqueante irá aguardar por um tempo pré-definido para poder enviar os dados.
+B)Correta;
+C)correto;
+D) Incorreto, na comunicação síncrona/bloqueante o sistema não retorno uma mensagem de erro caso o receptor não possa receber a mensagem, na verdade o sistema pausará sua execução até que o receptor receba a mensagem.
+E)Correto;
+F)Correto;
