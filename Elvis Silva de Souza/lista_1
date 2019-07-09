@@ -1,0 +1,77 @@
+1- Abstrair o acesso a recursos e gerenciar os mesmos, criando assim uma relação abstrata, na qual o acesso aos recursos se faz por meio de interfaces simples, independente das características e detalhes de baixo nível.
+
+2 - Pois provem interfaces de acesso aos dispositivos, torna aplicativos independentes do hardware e definir interfaces de acesso homogêneo para dispositivos com diferentes tecnologias.
+
+
+3 - Executar os aplicativos de forma simultânea e em velocidade adequada, gerando filas de acesso onde não ocorrerão conflitos. O principal desafio ao se implantar essa solução é impedir que os recursos do sistema sejam utilizados por um só usuário.
+
+
+4 -  Seu tempo de resposta é conhecido no melhor e pior caso de operação. É classificado em soft real-time systems e hard real-time systems. No soft-real-time systems, a perda de prazo implica na degradação do serviço prestado, e  no hard real-time systems, a perda de prazo pode causar graves consequências.
+
+5 -  É o coração do sistema operacional, responsável por todo gerenciamento dos demais recursos utilizados pelas aplicações, além de implementar as abstrações utilizadas pelos aplicativos.
+
+6 - Não, pois  , uma aplicação poderá interferir nas áreas de memória de outras aplicações ou do núcleo. Sem os privilégios uma aplicação pode acessar a placa de rede para enviar ou receber dados.
+
+7 - Sim, se houvesse de processamento entre os níveis.
+
+8 - Interrupções são eventos causados por dispositivos externos ao processador, exceções são eventos causados pelo próprio processador e traps são eventos causados por software.
+
+9 - O processador perde tempo para varrer todos os dispositivos do sistema para verificar se há a serem tratados ou não.
+
+10 - É uma chamada de biblioteca, pois a linguagem C não possui nenhum comando de entrada/saída, todas as operações de entrada/saída ocorrem mediante chamadas as funções da biblioteca.
+
+11 - Sistemas monolíticos:
+Vantagem : desempenho.
+Desvantagem : robustez e velocidade de desenvolvimento.
+
+Sistemas em Camadas: 
+Vantagem :  domínio das redes de computadores.
+Desvantagem:  demora no pedido da aplicação, prejudicando o desempenho do sistema.
+
+Sistemas micronúcleos: 
+Vantagem: robustez e flexibilidade.
+Desvantagem: custo associado ás trocas de mensagens muito elevados.
+
+Máquinas Virtuais:
+Vantagem : evita a construção de novas aplicações ou adapta as já existentes.
+Desvantagem : custo adicional de execução dos processos na máquina virtual em comparação a real.
+
+12 - [D] Deve ter um comportamento temporal previsível, com prazos de resposta claramente definidos.
+[M] Sistema operacional usado por uma empresa para executar seu banco de dados corporativo.
+[E] São tipicamente usados em telefones celulares e sistemas eletrônicos dedicados.
+[S] Neste tipo de sistema, a localização física dos recursos do sistema computacional é transparente para os usuários.
+[D] Todos os recursos do sistema têm proprietários e existem regras controlando o acesso aos mesmos pelos usuários.
+[T] A gerência de energia é muito importante neste tipo de sistema.
+[M] Construído para gerenciar de forma eficiente grandes volumes de recursos.
+[T] O MacOS X é um exemplo típico deste tipo de sistema.
+[E] São sistemas operacionais compactos, construídos para executar aplicações especificas sobre plataformas com poucos recursos.
+
+13 - C,E, e F, pois tais operações afetam de forma direta o hardware, de modo que é possível modifica-lo como no nível de administrador.
+
+14 - D e E, pois ambas interferem de forma direta com o hardware.
+
+15 - 
+[5]A rotina de tratamento da interrupção de software é ativada dentro do núcleo.
+[9]A função printf finaliza sua execução e devolve o controle ao código do processo.
+[1]A função de biblioteca printf recebe e processa os parâmetros de entrada (a string “Hello world”).
+[4]A função de biblioteca printf prepara os registradores para solicitar a chamada de sistema write().
+[8]O disco rígido gera uma interrupção indicando a conclusão da operação.
+[2]O escalonador escolhe o processo mais prioritário para execução.
+[7]Uma interrupção de software é acionada.
+[3]O processo chama a função printf da biblioteca C.
+[6]A operação de escrita no terminal é efetuada ou agendada pela rotina de tratamento da interrupção.
+[10]O controle volta para a função printf em modo usuário.
+
+16 - (C) As afirmações III e IV estão erradas.
+III está errada pois sua função não é pertencente a sistema de rede, mas pertence a sistemas distribuídos.
+IV está errada pois sua função não é pertencente a sistemas de tempo real, na verdade, pertence a sistemas de desktop.
+
+
+17 - (e) As afirmações II e V estão corretas.
+I está errada pois uma máquina virtual de sistema é construída para suportar sistemas operacionais convidados completos;
+III está errada pois isso ocorre em sistemas monolíticos e não micronúcleos;
+IV está errada pois sistemas monolíticos não tem uma manutenção fácil e sim complexa.
+
+18 - Para o carregamento de bibliotecas compartilhadas, mapeamento da memória e -- no final do rastreio -- a emissão das informações sobre a data para a saída padrão.
+
+19 - É possível observar que a função date executa as funções do processador sem utilizar bibliotecas.
