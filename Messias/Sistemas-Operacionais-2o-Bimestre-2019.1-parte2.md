@@ -165,6 +165,7 @@ Correta.
 #### Capítulo 23 - Uso de arquivos
 #### °Questões da avaliação
 página 13
+
 ##### (5) questão 3. Comente as principais formas de acesso a arquivos. Qual o uso mais apropriado para cada uma delas?
 
 <b>Acesso sequencial-</b>
