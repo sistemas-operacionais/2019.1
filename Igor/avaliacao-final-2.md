@@ -63,6 +63,45 @@ exclusivas sobre aquele determinado arquivo, por outro lado, permitem a existên
 
 #### P. 13 Questão 5.
 
-*
+* Semântica imutável: Em sua definição, um arquivo quando compartilhado entre vários processos, este arquivo não pode ser alterado, only read (apenas leitura). De tal forma que, arquivos compartilhados recebem a marcação de imutáveis, garantido total integridade do conteúdo;  
+
+* Semãntica UNIX: Em sua definição, um arquivo quando modificado é imediatamente modificado em todos os outros processos que possuem o arquivo aberto;  
+
+* Semântica de sessão: Em sua definição, cada processo que usar o arquivo deverá trabalhar com o mesmo em uma sessão, tal sessão se inicia com a abertura do arquivo e seu encerramento acontece com o fechamento. O contéudo centrato no arquivo é determinado pela última sessão ativa, pois nesta, aconetece a última atualização;  
+
+*  Semântica de transação: Em sua definição, trata-se de um conceito parecido com o de semântica de sessão, sua diferença acontece no momento que um conjunto de operações é realizada o arquivo é atualizado. Todas as modificações parciais do arquivo durante a execução de uma transação não são visíveis às demais transações, somente após sua conclusão;   
 
 ---
+
+>### Capítulo 24 - Sistemas de arquivos
+
+#### P. 20 Questão 1.
+
+* Dispositivos: Responsáveis pelo armazenamento dos dados. Exemplos de dispositivos: discos rígidos e bancos de memória flash;  
+
+* Controladores: São constituídos por circuitos eletrônicos dedicados ao controle dos dispositivos físicos. Eles são acessados por portas de entrada/saída;  
+
+* Drivers: Responsáveis pela interação entre os controladores, sistema operacional e os dispositivos. Cada controlador possuí sua própria interface, deste modo, torna-se necessário um drive específico para cada controlador;    
+
+* Gerência de blocos: Camada responsável pelo gerenciamento do fluxo de blocos de dados entre as camadas superiores e dispositivos de armazenamento. Todos os discos são dispositivos orientados a blocos, deste modo, leitura e escrita de dados são sempre feitas com blocos de dados;  
+
+* Alocação de arquivos: É uma estrturua que realiza a alocação dos arquivos sobre os blocos lógicos oferecidos pela camada de gerência de blocos. Os arquivos por sua vez, são vistos como uma sequência de blocos lógicos que devem ser armazenados nos blocos dos dispositivos;  
+
+
+* Sistema de arquivos virtual: É uma camada responsável por abstrações de pastas e atalhos, também gerencia permissões de arquivos que acontecem devido ao acesso compartilhado, também registra arquivo aberto pelos processo;  
+
+* Interface do sistema de arquivos: É um grupo de chamadas de sistema que estão disponíveis aos processos para a criação e modificação de arquivos;  
+
+
+#### P. 23 Questão 18.
+
+* Nesta abordagem é utilizado um pequeno conjunto de blocos no próprio volume em uma área reservada para criação de um registro de mapa de bits. Valores 0 e 1 da base 2 em bit são utilizados para representar se o bloco está livre ou ocupado, desta maneira mapeia-se os blocos utilizados e os blocos disponíveis de toda a partição;  
+
+---
+
+>### Capítulo 25 - Diretórios e atalhos
+
+
+#### P. 10 Questão 2.
+
+* A diferença encontrada a partir da leitura do capitulo foi: no S.O desenvolvido pela microsoft (Windows) o caractere separados utilizado é o \"\\" e a referência ao diretório raiz do sistema é o "[label do disco]:" geralmente o "C:\". Já no sistema UNIX, o caractere separador utlizado é o "/" e sua refêrencia raiz tambem é o "/", entretanto, o utilizador do sistema pode usar qualquer diretório como raiz e não se limitar apenas a um;  
