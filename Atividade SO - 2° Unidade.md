@@ -1,3 +1,5 @@
+### Sistemas Operacionais - 2º Bimestre - 2019.
+
 >#### Interação entre tarefas - Capítulo 13 - Impasses
 
          Página 10 - questão 4
@@ -85,7 +87,7 @@
       
 >#### Capítulo 17 - Paginação em disco
 
-     página 19 - questão 1
+    Página 19 - questão 1
         Falta de página é uma interrupção (ou exceção) disparada pelo hardware quando um programa acessa uma página mapeada no espaço de memória virtual, mas que não foi carregada na memória física do computador; O que pode causar isso é:
 
         - A página correspondente ao endereço requisitado não está carregada na memória;
@@ -100,8 +102,111 @@
             
         - Geralmente, o programa que recebe a exceção deve trata-lá, caso contrário, o sistema operacional realiza um padrão já implementado para tratar, deste modo, executa o término do processo que causou e mostra ao usuário que o programa apresenta um mal funcionamento, dependendo do S.O essa mensagem pode ser mostrando de diferentes maneiras, entretanto, todas com a mesma finalidade.
 
+>### Capítulo 20 - Software de entrada e saída
+
+    Por que os sistemas operacionais exigem de todos os drivers de disposito (device-drivers) a mesma interface padrão? Não seria mais apropriado deixar cada driver de dispositivo definir rotinas de interface que fazem sentido para aquele tipo específico de dispositivo?
+
+    Resposta: Não, pois é justamente essa exigência que torna a comunicação do sistema operacional com os 
+    dispositivos mais facil. Pois sem isso os sistemas operacionais teriam que 
+    se adaptar a qualquer dispositivo do mundo.
 
 
+>### Capítulo 21 - Discos rígidos
+    Página 12 - questão 3
+    A)
+    Para esta finalidade, eu escolheria o RAID 0, pois aqui os discos são
+     divididos em fatias (stripes), e essas fatias são concatenadas para melhor 
+    aproveitamento do espaço útil de disco. 
+    
+    B)Para esta finalidade, eu escolhereia o RAID 1, pois aqui o conteúdo 
+    é replicado em mais de um disco.
+    
+    C)Para esta finalidade, eu escolhereia o RAID 0, pois aqui os discos são dividos
+    em fatias, e essas fatias são concatenadas. Tudo isso contribui para haja um
+    maior espalhamento dos blocos sobre os discos físicos, e consequentemente esse 
+    arranjo obtem um melhor desempenho em leitura/escrita.
+    
+    D)Para esta finalidade, eu escolhereia o RAID 0, pois aqui os discos são dividos
+    em fatias, e essas fatias são concatenadas. Tudo isso contribui para haja um
+    maior espalhamento dos blocos sobre os discos físicos, e consequentemente esse 
+    arranjo obtem um melhor desempenho em leitura/escrita.
+    
+    
+    E)Para esta finalidade, eu escolhereia o RAID 5, por que assim como no RAID 4,
+    ele também aramazena informações de paridade para tolerar falhas, mas a diferença
+     aqui essas informações não ficam concentradas em um único disco físico, são 
+    distribuídas uniformemente entre os discos. E isso colabora no desempenho no
+    acesso aos dados. E esta é uma abordagem de RAID popular, por oferecer um bom
+    desempenho e redundância de dados, desperdiçando menos espaço que o
+    espelhamento
 
 
+>### Capítulo 22 - O conceito de arquivo
+    Página 10 - questão 3
+    Números Mágicos
+    Aqui se usa alguns bytes no começo do conteúdo do arquivos para 
+    se definir o formato dele. Essa forma tem uma segurança maior na manutenção 
+    do formato do arquivo, mas, é sempre será necessário ler o início do arquivo 
+    para reconhecer o formato.
+    
+    Extensão por nome
+    Aqui se usa o próprio nome do arquivo para definir o formato. É uma forma 
+    bem prática e simples, porém pode ser facilmente alterada.
 
+
+    Página 10 - questão 4
+    a) Incorreto - byte, não necessariamente numéricos
+
+    b) Correto
+    
+    C) Incorreto
+    
+    d) Correto
+    
+    e) Incorreto - São formatos de arquivo de código.
+    
+    f) Incorreto - É usado nos sistemas operacionais MacOS X e BeOS.
+
+
+>### Capítulo 23 - Uso de arquivos
+
+    Página 13 - questão 3
+    Acesso sequencial: Neste tipo de acesso, os dados são lidos ou escritos de maneira sequencial, do início até o final do arquivo. É o mais popular e utilizado em quase todos os S.O's do mercado e a forma mais usual de acesso aos arquivos.
+    Acesso direto a posições específicas do arquivo, indica-se a posição do arquivo onde fazer o acesso, read (file, position, size, buffer). Importante em SGBDs e aplicações similares, raramente implementada “pura” nos SOs.
+    Acesso aleatório: aqui se pode pode indiar a posição do aquivo onde cada leitura ou escrita deve acontecer. Essa forma é útil para gerenciadores de bancos de dados e aplicações congêneres que precisam frequentemente acessar as posições de arquivos.
+    Acesso mapeado em memória: Neste tipo de acesso, o arquivo é associado a um vetor de bytes de mesmo tamanho na memória principal, de forma que cada posição do vetor corresponda à sua posição equivalente no arquivo. É usado pelo núcleo para carregar código executável software e library na memória.
+    Acesso indexado, implementado em alguns sistemas, como o OpenVMS, estrutura interna do arquivo é vista com tabela indexada, acesso muito rápido (indexação implementada no núcleo), pouco usado nos SOs atuais, mas disponível por bibliotecas.
+
+    Página 13 - questão 4
+    Trava obrigatória: incontornável, imposta pelo núcleo aos processos, processos são suspensos aguardando liberar a trava, default nos sistemas Windows.
+    Travas recomendadas: Estas são impostas pelo próprio núcleo do S.O, entretanto, são gerenciadas pelo suporte da execução um exemplo deste suporte são as bibliotecas. São muitos os processos envolvendo o acesso dos mesmos arquivos, todavia, devem travá-los explicitamente quando forem acessá-los.
+    Travas exclusivas: garantem acesso exclusivo ao arquivo, enquanto uma trava exclusiva estiver ativa, nenhum outro processo poderá ter acesso ao arquivo.
+    Trava recomendada: impede travas exclusivas sobre o arquivo, permite mais travas compartilhadas.
+
+    Página 13 - questão 5
+    Semântica imutável: Aqui quando um arquivo é compartilhado entre vários processos, este arquivo não pode ser alterado, only read (apenas leitura). De tal forma que, arquivos compartilhados recebem a marcação de imutáveis, garantido total integridade do conteúdo;
+    
+    Semântica Unix: Modificações são imediatamente perceptíveis a todos os processos que envolvem aquele arquivo, comum em sistemas de arquivos locais UNIX.
+    
+    Semântica de Sessão: considera que cada processo usa um arquivo em uma sessão, que inicia com a abertura do arquivo e termina com o seu encerramento. Se um arquivo é modificado uma sessão só serão percebidas na mesma sessão e pelas que forem iniciadas após o encerramento da que realizou as alterações.
+    
+    Sessão de transição: Aqui trata-se de um conceito parecido com o de semântica de sessão, sua diferença acontece no momento que um conjunto de operações é realizada o arquivo é atualizado. Todas as modificações parciais do arquivo durante a execução de uma transação não são visíveis às demais transações, somente após sua conclusão.
+    
+
+>### Capítulo 24 - Sistemas de arquivos
+    Página 20 - questão 1
+    Dispositivos: Responsáveis pelo armazenamento dos dados. Como: discos rígidos e bancos de memória flash.
+    
+    Controladores: Constituídos por circuitos eletrônicos dedicados ao controle dos dispositivos físicos. Eles são acessados por portas de entrada/saída.
+    
+    Drivers: interagem com os controladores, SO e os dispositivos. É necessário um driver para cada controlador, pelo fato de cada controlodaor ter um interface.
+    
+    Gerência de blocos: gerencia o fluxo de blocos de dados entre a memória e os dispositivos de armazenamento
+    
+    Alocação de arquivos: realiza a alocação de arquivos sobre os blocos lógicos oferecidos pela camada de gerência de blocos.
+    
+    Sistema de arquivos virtual: É uma camada responsável por abstrações de pastas e atalhos, também gerencia permissões de arquivos que acontecem devido ao acesso compartilhado.
+    
+    Interface do sistema de arquivos: conjunto de chamadas de sistema oferecias aos processos do espaço de usuários para a criação e manupulação de arquivos.
+    
+   
