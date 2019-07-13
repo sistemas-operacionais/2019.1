@@ -208,5 +208,10 @@
     Sistema de arquivos virtual: É uma camada responsável por abstrações de pastas e atalhos, também gerencia permissões de arquivos que acontecem devido ao acesso compartilhado.
     
     Interface do sistema de arquivos: conjunto de chamadas de sistema oferecias aos processos do espaço de usuários para a criação e manupulação de arquivos.
+
+>### Capítulo 25 - Diretórios e atalhos
+    Página 10 - Questão 2
+    
+    As principais diferenças entre os dois são: o caracter separador e a referência ao diretório. O caracter separador do windows é o "\", e o no UNIX é o "/". E no windows a referência ao diretório raiz do sistema é o label do disco, como: "C:\", já no UNIX a referência ao diretório raiz do sistema é o "/".
     
    
