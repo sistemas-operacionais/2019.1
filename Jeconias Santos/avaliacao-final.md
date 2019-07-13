@@ -287,11 +287,29 @@ são incorretas, justificando sua resposta:
     - página 13
         - (5) questão 3. Comente as principais formas de acesso a arquivos. Qual o uso mais
 apropriado para cada uma delas?
+
             - Resposta:
+
+                Acesso sequencial: Os dados são sempre lidos e/ou escritos em sequência, do início ao final do arquivo. Para cada arquivo aberto por uma aplicação é definido um ponteiro de acesso, que inicialmente aponta para a primeira posição do arquivo. A cada leitura ou escrita, esse ponteiro é incrementado e passa a indicar a posição da próxima     leitura ou escrita.
+                
+                Acesso aleatório: No método de acesso aleatório (ou direto), pode-se indicar a posição no arquivo onde cada leitura ou escrita deve ocorrer, sem a necessidade de um ponteiro de posição corrente. Assim, caso se conheça previamente a posição de um determinado dado no arquivo, não há necessidade de percorrê-lo sequencialmente até encontrar o dado desejado. Essa forma de acesso é muito importante em gerenciadores de bancos de dados e aplicações congêneres, que precisam acessar rapidamente as posições do arquivo correspondentes ao registros desejados em uma operação.
+
+                O acesso sequencial é implementado em praticamente todos os sistemas operacionais de mercado e constitui a forma mais usual de acesso a arquivos, usada pela maioria das aplicações, por outro lado os SO oferencem operações para mudar a posição do ponteiro de acesso do arquivo caso necessário, o que permite então o acesso direto a qualquer registro do arquivo.
 
         - (6) questão 4. Apresente e explique os quatro principais tipos de travas sobre arquivos
 compartilhados disponíveis no sistema operacional.
-            - Resposta: 
+
+            - Resposta:
+
+                Travas obrigatórias (mandatory locks): São impostas pelo núcleo de forma incontornável: se um processo obtiver a trava de um arquivo, outros processos que solicitarem acesso ao mesmo arquivo serão suspensos até que aquela trava seja liberada.
+
+                Travas recomendadas (advisory locks): Não são impostas pelo núcleo do sistema operacional, mas gerenciadas pelo suporte de execução (bibliotecas). Os processos envolvidos no acesso aos mesmos arquivos devem travá-los explicitamente quando forem acessá-los. Contudo, um processo pode ignorar essa regra e acessar um arquivo ignorando a trava, caso necessário.
+                
+                Em relação ao compartilhamento das travas de arquivos, elas podem ser:
+
+                Travas exclusivas (ou travas de escrita): garantem acesso exclusivo ao arquivo: enquanto uma trava exclusiva estiver ativa, nenhum outro processo poderá obter outra trava sobre o mesmo arquivo.
+
+                Travas compartilhadas (ou travas de leitura): impedem outros processos de criar travas exclusivas sobre aquele arquivo, mas permitem a existência de outras travascompartilhadas.
 
         - (7) questão 5. Apresente e explique as quatro principais semânticas de acesso a arquivos
 compartilhados em um sistema operacional.
@@ -318,6 +336,7 @@ compartilhados em um sistema operacional.
 - Questões da avaliação
     - (8) página 20, questão 1. Apresente a arquitetura de gerência de arquivos presente em um sistema
 operacional típico, explicando seus principais elementos constituintes.
+
         - Resposta:
 
     - (9) página 23, questão 18. Explique como é efetuada a gerência de espaço livre através de
