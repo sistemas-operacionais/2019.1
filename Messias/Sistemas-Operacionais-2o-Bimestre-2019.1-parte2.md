@@ -168,8 +168,7 @@ página 13
 
 ##### (5) questão 3. Comente as principais formas de acesso a arquivos. Qual o uso mais apropriado para cada uma delas?
 
-<b>Acesso sequencial-</b>
-No acesso sequencial, os dados são sempre lidos e/ou escritos em sequência,
+Acesso sequencial-  No acesso sequencial, os dados são sempre lidos e/ou escritos em sequência,
 do início ao final do arquivo. Para cada arquivo aberto por uma aplicação é definido um
 ponteiro de acesso, que inicialmente aponta para a primeira posição do arquivo. A cada
 leitura ou escrita, esse ponteiro é incrementado e passa a indicar a posição da próxima
@@ -179,8 +178,8 @@ do mesmo. A chegada do ponteiro ao final do arquivo é normalmente sinalizada ao
 processo através de um flag de fim de arquivo (EoF – End-of-File).<br>
 O acesso sequencial é implementado em praticamente todos os sistemas operacionais de mercado
 e constitui a forma mais usual de acesso a arquivos, usada pela maioria das aplicações.<br>
-<b>Acesso aleatório-</b>
-No método de acesso aleatório (ou direto), pode-se indicar a posição no arquivo
+
+Acesso aleatório- No método de acesso aleatório (ou direto), pode-se indicar a posição no arquivo
 onde cada leitura ou escrita deve ocorrer, sem a necessidade de um ponteiro de posição
 corrente. Assim, caso se conheça previamente a posição de um determinado dado
 no arquivo, não há necessidade de percorrê-lo sequencialmente até encontrar o dado
@@ -191,8 +190,8 @@ Na prática, a maioria dos sistemas operacionais usa o acesso sequencial como
 modo básico de operação, mas oferece operações para mudar a posição do ponteiro
 de acesso do arquivo caso necessário, o que permite então o acesso direto a qualquer
 registro do arquivo.<br>
-<b>Acesso mapeado em memória-</b>
-Uma forma particular de acesso aleatório ao conteúdo de um arquivo é o
+
+Acesso mapeado em memória- Uma forma particular de acesso aleatório ao conteúdo de um arquivo é o
 mapeamento em memória do mesmo, que faz uso dos mecanismos de paginação em disco.
 Nessa modalidade de acesso, o arquivo é associado a um vetor
 de bytes (ou de registros) de mesmo tamanho na memória principal, de forma que
@@ -208,8 +207,8 @@ carregar código executável (programas e bibliotecas) na memória. Como somente
 partes efetivamente acessadas do código serão carregadas em RAM, esse procedimento
 é usualmente conhecido como paginação sob demanda (demand paging), pois os dados são
 lidos do arquivo para a memória em páginas.<br>
-<b>Acesso indexado-</b>
-Alguns sistemas operacionais oferecem também a possibilidade de acesso
+
+Acesso indexado-  Alguns sistemas operacionais oferecem também a possibilidade de acesso
 indexado aos dados de um arquivo, como é o caso do OpenVMS [Rice, 2000]. Esse
 sistema implementa arquivos cuja estrutura interna pode ser vista como uma tabela
 de pares chave/valor. Os dados do arq.<br>
@@ -218,15 +217,9 @@ e indexação do arquivo, o armazenamento e busca de dados nesse tipo de arquivo
 costuma ser muito rápido, dispensando bancos de dados para a construção de aplicações
 mais simples. A maioria dos sistemas operacionais de mercado não implementa essa
 funcionalidade diretamente no núcleo, mas ela pode ser facilmente obtida através de
-bibliotecas populares como BerkeleyDB ou SQLite.uivo são armazenados em registros com chaves
-(índices) associados a eles, e podem ser recuperados usando essas chaves, como em um
-banco de dados relacional.<br>
-Como o próprio núcleo desse sistema implementa os mecanismos de acesso
-e indexação do arquivo, o armazenamento e busca de dados nesse tipo de arquivo
-costuma ser muito rápido, dispensando bancos de dados para a construção de aplicações
-mais simples. A maioria dos sistemas operacionais de mercado não implementa essa
-funcionalidade diretamente no núcleo, mas ela pode ser facilmente obtida através de
 bibliotecas populares como BerkeleyDB ou SQLite.
+
+
 ##### (6) questão 4. Apresente e explique os quatro principais tipos de travas sobre arquivos compartilhados disponíveis no sistema operacional.
 
 <b>Travas obrigatórias-</b> (mandatory locks): são impostas pelo núcleo de forma incontornável:
