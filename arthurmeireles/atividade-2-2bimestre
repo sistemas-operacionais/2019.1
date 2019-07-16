@@ -1,0 +1,25 @@
+# Atividade Sistemas Operacionais
+### Arthur Meireles da Silva
+
+## Capítulo 20 - Software de entrada e saída 
+
+** 1. Por que os sistemas operacionais exigem de todos os drivers de dispositivo (device-drivers) a mesma interface padrão? Não seria mais apropriado deixar cada driver de dispositivo definir rotinas de interface que fazem sentido para aquele tipo específico de dispositivo?**
+
+Porque entre dispositivos similares há centenas de modelos de diferentes fabricantes com interfaces distintas. Então acima dos drivers existe uma camada de código, denominada generic device interface, que tem a finalidade de construir uma visão genérica dos dispositivos para que o sistema operacional não precise conhecer todas as características próprias de cada dispositivo mas possa tratá-los por famílias ou classes.
+
+## Capítulo 21 - Discos rígidos
+** 03. Você tem 4 discos rígidos de 8 TB cada, que pode organizar de diversas formas. Indique os arranjos RAID que escolheria para obter: **
+**a. O maior espaço útil de disco. 
+b. A maior tolerância a falhas de disco. 
+c. A maior velocidade média de leitura. 
+d. A maior velocidade média de escrita. 
+e. Equilíbrio entre espaço útil, velocidades e tolerância a falhas. 
+Justifique/explique suas respostas**
+
+RAID 0 (striping), RAID 1, RAID 5.
+
+## Capítulo 25 - Diretórios e atalhos
+
+** 2. Do ponto de vista lógico, quais as principais diferenças entre a estrutura de diretórios Unix e Windows? **
+        
+As diferenças da estrutura de diretórios entre o Windows e Unix é que o caractere separador no nome do caminho é "\" no Windows e "/" no Unix, e o sistema Unix você pode montar o diretório "/usr" em uma outra partição ou até mesmo dentro de outra máquina na sua rede corporativa, já no Windows você não consegue colocar "C:\windows\system" para outra partição.
