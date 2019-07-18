@@ -1,0 +1,179 @@
+Atividade de sistemas operacionais
+Capitulo 1
+1º Quais os dois principais objetivos dos sistemas operacionais?
+Resposta: Abstração e Gerência de Recursos.
+2º Por que a abstração de recursos é importante para os desenvolvedores de aplicações? Ela
+tem utilidade para os desenvolvedores do próprio sistema operacional?
+Resposta 1: Devido a abstração prover interfaces de acesso a dispositivos mais simples de usar
+que as de construção de baixo nível, também serve para simplificar a construção de programas
+aplicativos
+Resposta 2: Sim, a abstração é bem útil porque o acesso se faz através de interfaces simples.
+3º A gerência de atividades permite compartilhar o processador, executando mais de uma
+aplicação ao mesmo tempo. Identifique as principais vantagens trazidas por essa
+funcionalidade e os desafios a resolver para implementá-la.
+Resposta: A melhor vantagem é realizar várias atividades simultaneamente. Os desafios para a
+implementação são o uso do processador para distribuição entre todos os aplicativos do
+sistema.
+4º O que caracteriza um sistema operacional de tempo real? Quais as duas classificações de
+sistemas operacionais de tempo real e suas diferenças?
+Resposta 1: um sistema operacional de tempo real não precisa ser necessariamente
+ultrarrápido; sua característica essencial é ter um comportamento temporal previsível, a
+estrutura interna de um sistema operacional de tempo real deve ser construída de forma a
+minimizar esperas e latências imprevisíveis, como tempos de acesso a disco e sincronizações
+excessivas.
+Resposta 2: soft real-time systems, nos quais a perda de prazos implica na degradação do
+serviço prestado. Um exemplo seria o suporte à gravação de CDs ou à reprodução de músicas.
+Caso o sistema se atrase, pode ocorrer a perda da mídia em gravação ou falhas na música que
+está sendo tocada.
+hard real-time systems a perda de prazos pelo sistema pode perturbar o objeto controlado,
+com graves consequências humanas, econômicas ou ambientais. Exemplos desse tipo de
+sistema seriam o controle de funcionamento de uma turbina de avião a jato ou de uma
+caldeira industrial.
+5º O que diferencia o núcleo do restante do sistema operacional?
+Resposta: O núcleo é o coração do sistema operacional, responsável pela gerência dos
+recursos do hardware usados pelas aplicações. Ele também implementa as principais
+abstrações utilizadas pelos programas aplicativos.
+6º Seria possível construir um sistema operacional seguro usando um processador que não
+tenha níveis de privilégio? Por quê?
+Resposta: Não, pois uma aplicação poderá interferir nas áreas de memória de outras
+aplicações ou do núcleo.
+7º O processador Pentium possui dois bits para definir o nível de privilégio, resultando em 4
+níveis distintos. A maioria dos sistemas operacionais para esse processador usa somente os
+níveis extremos (0 e 3, ou 002 e 112). Haveria alguma utilidade para os níveis intermediários?
+Resposta: sim, se houvesse processamento entre os níveis.
+8º Quais as diferenças entre interrupções, exceções e traps?
+Resposta: Interrupção é quando o processador suspende seu fluxo de execução corrente e
+desvia para um endereço pré-definido, onde assim onde se encontra uma rotina de
+tratamento de interrupção. Exceções são os eventos gerados pelo próprio processador, que
+podem ocasionar o desvio de execução usando o mesmo mecanismo das interrupções. Traps é
+uma interrupção que comuta o processador para o nível privilegiado e procede de forma
+similar ao tratamento de uma interrupção.
+9º Quais as implicações de mascarar interrupções? O que pode ocorrer se o processador
+ignorar interrupções por muito tempo? O que poderia ser feito para evitar o mascaramento de
+interrupções?
+Resposta: o processador perde muito tempo pra varrer todos os dispositivos do sistema para
+verificar se há eventos a serem tratados ou não.
+10º O comando em linguagem C fopen é uma chamada de sistema ou uma função de
+biblioteca? Por quê?
+Resposta: é uma função porque recebe como parâmetros o nome do arquivo a ser aberto e o
+tipo de abertura a ser realizado.
+11º Monte uma tabela com os benefícios e deficiências mais significativos das principais
+arquiteturas de sistemas operacionais.
+Resposta: Sistemas monolíticos Vantagem de desempenho. Desvantagem de robustez e
+velocidade de desenvolvimento.
+Sistemas em camadas Vantagem de domínio das redes de computadores. Desvantagem
+demora no pedido de aplicação que resulta prejudicando o desempenho do sistema.
+Sistemas micronúcleos Vantagem de robustez e flexibilidade. Desvantagem custo associado a
+troca de mensagens muito elevado.
+Maquinas virtuais Vantagem de evitar a construção de novas aplicações. Desvantagem custo
+adicional de execução dos processos na máquina virtual em comparação a máquina real.
+12º Relacione as afirmações aos respectivos tipos de sistemas operacionais:
+distribuído (D), multiusuário (M), desktop (K), servidor (S), embarcado (E) ou de tempo real (T)
+(D) Deve ter um comportamento temporal previsível, com prazos de resposta claramente
+definidos.
+(M) Sistema operacional usado por uma empresa para executar seu banco de dados
+corporativo.
+(E) São tipicamente usados em telefones celulares e sistemas eletrônicos dedicados.
+(S) Neste tipo de sistema, a localização física dos recursos do sistema computacional é
+transparente para os usuários.
+(D) Todos os recursos do sistema têm proprietários e existem regras controlando o acesso aos
+mesmos pelos usuários.
+(T) A gerência de energia é muito importante neste tipo de sistema.
+(K) Sistema que prioriza a gerência da interface gráfica e a interação com o usuário.
+(M) Construído para gerenciar de forma eficiente grandes volumes de recursos.
+(T) O MacOS X é um exemplo típico deste tipo de sistema.
+(E) São sistemas operacionais compactos, construídos para executar aplicações específicas
+sobre plataformas com poucos recursos.
+13º A operação em modo usuário permite ao processador executar somente parte das
+instruções disponíveis em seu conjunto de instruções. Quais das seguintes operações não
+deveriam ser permitidas em nível usuário? Por quê?
+(a) Ler uma porta de entrada/saída
+(b) Efetuar uma divisão inteira
+(c) Escrever um valor em uma posição de memória
+(d) Ajustar o valor do relógio do hardware
+(e) Ler o valor dos registradores do processador
+(f) Mascarar uma ou mais interrupções
+Resposta: C, E e F as seguintes alternativas lidam diretamente com o hardware
+14º Considerando um processo em um sistema operacional com proteção de memória entre o
+núcleo e as aplicações, indique quais das seguintes ações do processo teriam de ser realizadas
+através de chamadas de sistema, justificando suas respostas:
+(a) Ler o relógio de tempo real do hardware.
+(b) Enviar um pacote através da rede.
+(c) Calcular uma exponenciação.
+(d) Preencher uma área de memória do processo com zeros.)
+(e) Remover um arquivo do disco.
+Resposta: D e E as alternativas escolhidas ambas lidam com o hardware diretamente.
+15º Coloque na ordem correta as ações abaixo, que ocorrem durante a execução da função
+printf ("Hello world") por um processo (observe que nem todas as ações indicadas fazem parte
+da seqüência).
+(5) A rotina de tratamento da interrupção de software é ativada dentro do núcleo.
+(9) A função printf finaliza sua execução e devolve o controle ao código do processo.
+(1) A função de biblioteca printf recebe e processa os parâmetros de entrada (a string “Hello
+world”).
+(4) A função de biblioteca printf prepara os registradores para solicitar a chamada de sistema
+write()
+(8) O disco rígido gera uma interrupção indicando a conclusão da operação.
+(2) O escalonador escolhe o processo mais prioritário para execução.
+(7) Uma interrupção de software é acionada.
+(3) O processo chama a função printf da biblioteca C.
+(6) A operação de escrita no terminal é efetuada ou agendada pela rotina de tratamento da
+interrupção.
+(10) O controle volta para a função printf em modo usuário.
+16º Considere as afirmações a seguir, relativas aos diversos tipos de sistemas operacionais:
+I. Em um sistema operacional de tempo real, a rapidez de resposta é menos importante que a
+previsibilidade do tempo de resposta.
+II. Um sistema operacional multi-usuários associa um proprietário a cada recurso do sistema e
+gerencia as permissões de acesso a esses recursos.
+III. Nos sistemas operacionais de rede a localização dos recursos é transparente para os
+usuários.
+IV. Um sistema operacional de tempo real deve priorizar as tarefas que interagem com o
+usuário.
+V. Um sistema operacional embarcado é projetado para operar em hardware com poucos
+recursos.
+Indique a alternativa correta:
+(a) As afirmações II e III estão corretas.
+(b) Apenas a afirmação V está correta.
+(c) As afirmações III e IV estão erradas.
+(d) As afirmações III, IV e V estão erradas.
+(e) Todas as afirmações estão erradas.
+Resposta: III - está errado pois é uma característica de sistemas distribuídos e não de rede; e IV
+está errado pois é uma característica de sistemas desktop e não de tempo real.
+17º Considere as afirmações a seguir, relativas às diversas arquiteturas de sistemas
+operacionais:
+I. Uma máquina virtual de sistema é contruída para suportar uma aplicação
+escrita em uma linguagem de programação específica, como Java.
+II. Um hipervisor convidado executa sobre um sistema operacional hospedeiro.
+III. Em um sistema operacional micro-núcleo, os diversos componentes do sistema são
+construídos como módulos interconectados executando dentro do núcleo.
+IV. Núcleos monolíticos são muito utilizados devido à sua robustez e facilidade de
+manutenção.
+V. Em um sistema operacional micro-núcleo, as chamadas de sistema são implementadas
+através de trocas de mensagens.
+Indique a alternativa correta:
+(a) Todas as afirmações estão erradas.
+(b) As afirmações II e III estão corretas.
+(c) As afirmações II e IV estão erradas.
+(d) Apenas a afirmação V está correta.
+(e) As afirmações II e V estão corretas.
+Resposta: A alternativa certa é a letra E
+I - Está errada pois uma máquina virtual de sistema é construída para suportar sistemas
+operacionais convidados completos; III está errada pois isso ocorre em sistemas monolíticose
+não micro-núcleos; IV está errada pois sistemas monolíticos não tem uma manutenção fácil e
+sim complexa.
+18º O utilitário strace do UNIX permite observar a sequência de chamadas de sistema
+efetuadas por uma aplicação. Em um terminal UNIX, execute strace date para descobrir quais
+os arquivos abertos pela execução do utilitário date (que indica a data e hora correntes). Por
+que o utilitário date precisa fazer chamadas de sistema?
+Resposta: Para o carregamento de bibliotecas compartilhadas, mapeamento da memória e no
+final do rastreio a emissão das informações sobre a data para a saída padrão.
+19º O utilitário ltrace do UNIX permite observar a sequência de chamadas de biblioteca
+efetuadas por uma aplicação. Em um terminal UNIX, execute ltrace date para descobrir as
+funções de biblioteca chamadas pela execução do utilitário date (que indica a data e hora
+correntes). Pode ser observada alguma relação entre as chamadas de biblioteca e as chamadas
+de sistema observadas no ítem anterior?
+Resposta: O utilitário date chama uma biblioteca com o fim de comunicar com o núcleo. Esta
+biblioteca manipula os detalhes de baixo nível relacionados com a passagem de informação
+para o núcleo e com a chamada da rotina privilegiada propriamente dita, nomeadamente a
+conversão de convenções de chamadas. As chamadas de sistema são oferecidas para as
+aplicações em modo usuário através do system library que prepara os parâmetros, invoca a
+interrupção de software e retorna à aplicação os resultados obtidos.
